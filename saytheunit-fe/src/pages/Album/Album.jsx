@@ -1,4 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import './index.css';
+import ResultCard from '../../components/ResultCard/ResultCard';
 import albumBg from '../../assets/images/svt-total-bg.jpeg';
 import bongbong from '../../assets/images/bongbong.png';
 
@@ -6,18 +11,38 @@ const Album = () => {
   const [textToShow, setTextToShow] = useState(Array(13).fill(false));
   const [hoveredAreas, setHoveredAreas] = useState([]);
   const [iconsVisibility, setIconsVisibility] = useState(Array(13).fill(false));
+  const [selectedAreas, setSelectedAreas] = useState([]); // 태그 수 제한
+  const [backendData, setBackendData] = useState([]);
 
   const handleAreaClick = index => {
-    setTextToShow(prevState => {
-      const newState = [...prevState];
-      newState[index] = !newState[index];
-      return newState;
-    });
-    setIconsVisibility(prevState => {
-      const newState = [...prevState];
-      newState[index] = !newState[index];
-      return newState;
-    });
+    if (selectedAreas.length === 4 && !selectedAreas.includes(index)) {
+      toast.warning('최대 4명까지 선택할 수 있습니다.', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      const selectedIndex = selectedAreas.indexOf(index);
+      let updatedSelectedAreas = [...selectedAreas];
+
+      if (selectedIndex === -1) {
+        updatedSelectedAreas = [...selectedAreas, index];
+      } else {
+        updatedSelectedAreas.splice(selectedIndex, 1);
+      }
+
+      setSelectedAreas(updatedSelectedAreas);
+
+      setTextToShow(prevState => {
+        const newState = [...prevState];
+        newState[index] = !newState[index];
+        return newState;
+      });
+
+      setIconsVisibility(prevState => {
+        const newState = [...prevState];
+        newState[index] = !newState[index];
+        return newState;
+      });
+    }
   };
 
   const handleAreaHover = index => {
@@ -33,20 +58,45 @@ const Album = () => {
     setHoveredAreas(prevState => prevState.filter(area => area !== index));
   };
 
+  const fetchDataFromBackend = async () => {
+    try {
+      const response = await axios.post('/api/getMembersData', {
+        selectedMembers: selectedAreas.map(
+          index => areaNames[index].split(' ')[1],
+        ),
+      });
+      console.log(response.data); // 받은 데이터 출력
+      if (response.data.length === 0) {
+        console.log('받은 데이터 없어용', response.data);
+        setBackendData(response.data);
+      } else {
+        console.log('받은 데이터 있어용', response.data);
+        setBackendData(response.data); // 여러 유닛 데이터 중 첫번째만
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  // 즉각 반영을 위한 동기 방식
+  useEffect(() => {
+    fetchDataFromBackend();
+  }, [selectedAreas]);
+
   const areaNames = [
-    '에스쿱스',
-    '정한',
-    '조슈아',
-    '준',
-    '호시',
-    '원우',
-    '우지',
-    '디에잇',
-    '민규',
-    '도겸',
-    '승관',
-    '버논',
-    '디노',
+    '에스쿱스 SCOUPS',
+    '정한 JEONGHAN',
+    '조슈아 JOSHUA',
+    '준 JUN',
+    '호시 HOSHI',
+    '원우 WONWOO',
+    '우지 WOOZI',
+    '디에잇 THE8',
+    '민규 MINGYU',
+    '도겸 DK',
+    '승관 SEUNGKWAN',
+    '버논 VERNON',
+    '디노 DINO',
   ];
 
   const bongbongStyles = [
@@ -291,27 +341,42 @@ const Album = () => {
               </div>
             ))}
           </div>
-
-          <div className="relative mt-10 flex flex-col items-center text-center p-4 bg-white">
-            {textToShow.map(
-              (show, index) =>
-                show && (
-                  <div
-                    key={index}
-                    className="mb-2 w-48 h-12 rounded-xl bg-blue-500 text-white"
-                  >
-                    <p
-                      className="text-md font-bold cursor-pointer"
-                      onClick={() => handleAreaClick(index)}
-                    >
-                      {areaNames[index]} (클릭하여 숨기기)
-                    </p>
-                    <p className="text-sm">{`${areaNames[index]}입니다.`}</p>
-                  </div>
-                ),
-            )}
-          </div>
         </div>
+        <div className="my-8 text-lg font-bold text-center">
+          선택한 멤버
+          <br />
+          <p className="text-sm font-light">클릭하면 선택 해제 가능</p>
+          <ToastContainer autoClose={1700} closeOnClick limit={1} />
+        </div>
+        {/* <button onClick={fetchDataFromBackend}>찾아보기</button> */}
+        <div className="relative w-full h-auto px-20 flex flex-row gap-4 justify-center items-center text-center bg-white">
+          {textToShow.map(
+            (show, index) =>
+              show && (
+                <div
+                  key={index}
+                  className="member-tag w-20 h-8 rounded-[28px] text-white flex items-center justify-center"
+                >
+                  <p
+                    className="text-md font-bold cursor-pointer"
+                    onClick={() => handleAreaClick(index)}
+                  >
+                    {areaNames[index].split(' ')[0]}
+                  </p>
+                  {/* <p className="text-sm">{`${areaNames[index]}입니다.`}</p> */}
+                </div>
+              ),
+          )}
+        </div>
+      </section>
+      <section className="w-full h-auto bg-blue-300 px-36 py-10 flex flex-col gap-4">
+        {backendData.length === 0 ? (
+          <ResultCard text="데이터가 없습니다" />
+        ) : (
+          backendData.map((data, index) => (
+            <ResultCard text={null} key={index} result={data} />
+          ))
+        )}
       </section>
     </>
   );
