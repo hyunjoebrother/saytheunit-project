@@ -1,0 +1,19 @@
+.member-tag {
+  filter: hue-rotate(360deg);
+  transition: border-color 0.3s;
+  background-image: linear-gradient(to right, #f8cacc 0%, #8da4d0 100%),
+    linear-gradient(to right, #f8cacc 0%, #8da4d0 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-image-slice: 1;
+  animation: huerotate 6s infinite linear;
+}
+
+@keyframes huerotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
