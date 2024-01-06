@@ -60,7 +60,7 @@ const Album = () => {
 
   const fetchDataFromBackend = async () => {
     try {
-      const response = await axios.get('/api/getMembersData', {
+      const response = await axios.post('/api/getMembersData', {
         selectedMembers: selectedAreas.map(
           index => areaNames[index].split(' ')[1],
         ),
@@ -81,7 +81,6 @@ const Album = () => {
   // 즉각 반영을 위한 동기 방식
   useEffect(() => {
     fetchDataFromBackend();
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAreas]);
 
