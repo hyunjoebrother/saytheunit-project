@@ -60,14 +60,11 @@ const Album = () => {
 
   const fetchDataFromBackend = async () => {
     try {
-      const response = await axios.post(
-        'https://saytheunit-project.pages.dev/api/getMembersData',
-        {
-          selectedMembers: selectedAreas.map(
-            index => areaNames[index].split(' ')[1],
-          ),
-        },
-      );
+      const response = await axios.post('/api/getMembersData', {
+        selectedMembers: selectedAreas.map(
+          index => areaNames[index].split(' ')[1],
+        ),
+      });
       // console.log(response.data); // 받은 데이터 출력
       if (response.data.length === 0) {
         // console.log('받은 데이터 없어용', response.data);
@@ -84,7 +81,7 @@ const Album = () => {
   // 즉각 반영을 위한 동기 방식
   useEffect(() => {
     fetchDataFromBackend();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAreas]);
 
   const areaNames = [
