@@ -60,7 +60,7 @@ const Album = () => {
 
   const fetchDataFromBackend = async () => {
     try {
-      const response = await axios.post('/api/getMembersData', {
+      const response = await axios.get('/api/getMembersData', {
         selectedMembers: selectedAreas.map(
           index => areaNames[index].split(' ')[1],
         ),
