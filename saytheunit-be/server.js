@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require('path');
 const mysql = require("mysql2");
 require("dotenv").config();
 const app = express();
@@ -20,10 +19,6 @@ connection.connect((err) => {
 });
 
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../saytheunit-fe/build", "index.html"));
-});
 
 app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
