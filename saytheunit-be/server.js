@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
 });
 
-app.post("http://52.79.138.79/api/getMembersData", async (req, res) => {
+app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
   console.log("선택 멤버", selectedMembers);
 
