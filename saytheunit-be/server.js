@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 const mysql = require("mysql2");
 require("dotenv").config();
 const app = express();
@@ -19,6 +20,10 @@ connection.connect((err) => {
 });
 
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../saytheunit-fe/build", "index.html"));
+});
 
 app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
@@ -105,6 +110,7 @@ function findCommonUnitNames(arrays) {
 
 // 서버 시작
 const PORT = 3000;
+// const PORT = 1717; - EC2
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
