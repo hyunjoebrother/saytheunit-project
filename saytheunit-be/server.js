@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 
 const connection = mysql.createConnection({
-  host: "localhost",
+  host: process.env.DB_HOST,
   user: "root",
   password: process.env.DB_PASSWORD,
   database: "dev_saytheunit_db",
