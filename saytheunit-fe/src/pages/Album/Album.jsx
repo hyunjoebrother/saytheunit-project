@@ -81,7 +81,7 @@ const Album = () => {
   // 즉각 반영을 위한 동기 방식
   useEffect(() => {
     fetchDataFromBackend();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAreas]);
 
   const areaNames = [
