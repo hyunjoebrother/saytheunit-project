@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path");
+const cors = require("cors");
 const mysql = require("mysql2");
 require("dotenv").config();
 const app = express();
@@ -18,9 +20,16 @@ connection.connect((err) => {
   console.log("Connected to MySQL database");
 });
 
+app.use(cors());
 app.use(express.json());
 
-app.post("/api/getMembersData", async (req, res) => {
+app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
+});
+
+app.post("http://52.79.138.79/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
   console.log("선택 멤버", selectedMembers);
 
@@ -33,15 +42,6 @@ app.post("/api/getMembersData", async (req, res) => {
     const results = await Promise.all(
       queries.map((query) => executeQuery(query))
     );
-
-    // const unitsData = results.map((result) =>
-    //   result.map((row) => ({
-    //     unit_name: row.unit_name,
-    //     unit_info: row.unit_info,
-    //     unit_member: row.unit_member,
-    //     like: row.like,
-    //   }))
-    // );
 
     const commonUnitNames = findCommonUnitNames(
       results.map((result) => result.map((row) => row.unit_name))
@@ -104,8 +104,8 @@ function findCommonUnitNames(arrays) {
 }
 
 // 서버 시작
-const PORT = 3000;
-// const PORT = 1717; - EC2
+const PORT = 1717;
+// const PORT = 3000; - before proxy EC2
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
