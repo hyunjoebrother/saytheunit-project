@@ -81,6 +81,7 @@ const Album = () => {
   // 즉각 반영을 위한 동기 방식
   useEffect(() => {
     fetchDataFromBackend();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAreas]);
 
   const areaNames = [
@@ -355,12 +356,10 @@ const Album = () => {
               show && (
                 <div
                   key={index}
-                  className="member-tag w-20 h-8 rounded-[28px] text-white flex items-center justify-center"
+                  onClick={() => handleAreaClick(index)}
+                  className="member-tag w-20 h-8 rounded-[28px] text-white flex items-center justify-center cursor-pointer"
                 >
-                  <p
-                    className="text-md font-bold cursor-pointer"
-                    onClick={() => handleAreaClick(index)}
-                  >
+                  <p className="text-md font-bold">
                     {areaNames[index].split(' ')[0]}
                   </p>
                   {/* <p className="text-sm">{`${areaNames[index]}입니다.`}</p> */}
@@ -371,7 +370,7 @@ const Album = () => {
       </section>
       <section className="w-full h-auto bg-blue-300 px-36 py-10 flex flex-col gap-4">
         {backendData.length === 0 ? (
-          <ResultCard text="데이터가 없습니다" />
+          <ResultCard text="유닛 이름이 아직 없습니다..!" />
         ) : (
           backendData.map((data, index) => (
             <ResultCard text={null} key={index} result={data} />

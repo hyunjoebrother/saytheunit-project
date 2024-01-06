@@ -34,14 +34,14 @@ app.post("/api/getMembersData", async (req, res) => {
       queries.map((query) => executeQuery(query))
     );
 
-    const unitsData = results.map((result) =>
-      result.map((row) => ({
-        unit_name: row.unit_name,
-        unit_info: row.unit_info,
-        unit_member: row.unit_member,
-        like: row.like,
-      }))
-    );
+    // const unitsData = results.map((result) =>
+    //   result.map((row) => ({
+    //     unit_name: row.unit_name,
+    //     unit_info: row.unit_info,
+    //     unit_member: row.unit_member,
+    //     like: row.like,
+    //   }))
+    // );
 
     const commonUnitNames = findCommonUnitNames(
       results.map((result) => result.map((row) => row.unit_name))
@@ -61,7 +61,6 @@ app.post("/api/getMembersData", async (req, res) => {
       res.json([]);
     }  else {
       const result = await executeQuery(findquery); // 한 명 일 때
-      // let firstResult = Object.keys(result)[0];
       
       // 찾은 여러 타겟 데이터 중 첫번째만
       const uniqueResult = result.reduce((unique, current) => {
@@ -77,18 +76,6 @@ app.post("/api/getMembersData", async (req, res) => {
       res.json(uniqueResult);
     }
 
-
-    // const targetUnitData = commonUnitNames.map((unitName) => {
-    //   const index =
-    //     unitsData.findIndex((data) => data.unit_name === unitName);
-    //   // console.log(index, unitName);
-    //   console.log("호에에", unitsData[0][index]);
-    //   // return unitsData[index];
-    //   return unitsData[0][index];
-    // });
-
-    // console.log("유닛 정보", targetUnitData, targetUnitData[0]);
-    // res.json(targetUnitData[0]);
   } catch (error) {
     console.error("Error fetching data:", error);
     res.status(500).json({ error: "Error fetching data" });
