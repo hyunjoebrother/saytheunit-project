@@ -20,15 +20,6 @@ connection.connect((err) => {
   console.log("Connected to MySQL database");
 });
 
-app.use(cors());
-app.use(express.json());
-
-app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
-});
-
 app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
   console.log("선택 멤버", selectedMembers);
@@ -105,7 +96,7 @@ function findCommonUnitNames(arrays) {
 
 // 서버 시작
 const PORT = 1717;
-// const PORT = 3000; - before proxy EC2
+// const PORT = 3000; // develop port
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
