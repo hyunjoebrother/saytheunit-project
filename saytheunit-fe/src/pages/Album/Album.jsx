@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
-import albumBg from '../../assets/images/svt-total-bg.jpeg';
+import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
 import bongbong from '../../assets/images/bongbong.png';
 
 const Album = () => {
@@ -1040,33 +1040,35 @@ const Album = () => {
             ))}
           </div>
         </div>
-        <div className="my-8 text-lg font-bold text-center">
+        <div className="mt-8 mb-4 2xs:text-sm xs:text-base 2sm:text-base text-base font-bold text-center">
           선택한 멤버
           <br />
-          <p className="text-sm font-light">클릭하면 선택 해제 가능</p>
-          <ToastContainer autoClose={1700} closeOnClick limit={1} />
+          <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-sm font-light">
+            멤버 또는 버튼을 클릭하면 선택 해제 가능
+          </p>
+          <ToastContainer autoClose={1000} closeOnClick limit={1} />
         </div>
-        {/* <button onClick={fetchDataFromBackend}>찾아보기</button> */}
-        <div className="relative w-full h-auto px-20 flex flex-row gap-4 justify-center items-center text-center bg-white">
+        <div className="relative w-full h-auto 2xs:px-0 xs:px-0 2sm:px-0 px-20 py-4 flex flex-row 2xs:gap-2 xs:gap-2 2sm:gap-3 gap-4 justify-center items-center text-center bg-trasnparent">
           {textToShow.map(
             (show, index) =>
               show && (
                 <div
                   key={index}
                   onClick={() => handleAreaClick(index)}
-                  className="member-tag w-20 h-8 rounded-[28px] text-white flex items-center justify-center cursor-pointer"
+                  className="member-tag 2xs:w-16 2xs:h-6 xs:w-16 xs:h-6 2sm:w-16 2sm:h-6 w-20 h-8 rounded-[28px] text-white flex items-center justify-center cursor-pointer"
                 >
-                  <p className="text-md font-bold">
+                  <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-md font-bold">
                     {areaNames[index].split(' ')[0]}
                   </p>
-                  {/* <p className="text-sm">{`${areaNames[index]}입니다.`}</p> */}
                 </div>
               ),
           )}
         </div>
       </section>
-      <section className="w-full h-auto bg-blue-300 2xs:px-8 2xs:py-6 xs:px-10 xs:py-6 2sm:px-10 2sm:py-6 sm:px-10 sm:py-6 tb:px-36 tb:py-10 flex flex-col gap-4">
-        {backendData.length === 0 ? (
+      <section className="w-full h-auto m-auto items-center bg-transparent 2xs:px-6 2xs:py-6 xs:px-8 xs:py-6 2sm:px-8 2sm:py-6 sm:px-10 sm:py-6 tb:px-10 tb:py-10 lg:px-36 lg:py-10 flex flex-col gap-4">
+        {backendData === null ? (
+          <ResultCard text="멤버를 선택해주세요" />
+        ) : backendData.length === 0 ? (
           <ResultCard text="유닛 이름이 아직 없습니다..!" />
         ) : (
           backendData.map((data, index) => (

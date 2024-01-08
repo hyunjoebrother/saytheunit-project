@@ -9,7 +9,7 @@ const ResultCard = ({ result, text }) => {
   }
 
   return (
-    <section className="w-full h-auto rounded-2xl bg-white px-10 py-4">
+    <section className="w-full 2sm:w-[326px] sm:w-[480px] tb:w-[560px] lg:w-[600px] flex h-auto 2xs:rounded-[10px] rounded-2xl bg-white px-10 py-4">
       {isUnit ? (
         <div className="flex flex-col text-left items-start justify-center">
           <ul className="list-none text-left gap-2">
@@ -29,8 +29,10 @@ const ResultCard = ({ result, text }) => {
           </ul>{' '}
         </div>
       ) : (
-        <div className="flex text-center items-center justify-center">
-          <p className="text-black">{text}</p>
+        <div className="flex m-auto text-center items-center justify-center">
+          <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-black">
+            {text}
+          </p>
         </div>
       )}
     </section>
