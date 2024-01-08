@@ -6,7 +6,7 @@ import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
 import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
 import bongbong from '../../assets/images/bongbong.png';
-import TipCard from '../../components/TipCard/TipCard';
+import CountingCard from '../../components/CountingCard/CountingCard';
 
 const Album = () => {
   const [textToShow, setTextToShow] = useState(Array(13).fill(false));
@@ -167,7 +167,7 @@ const Album = () => {
 
   return (
     <>
-      <section className="w-full h-full 2xs:p-4 xs:p-6 2sm:p-8 sm:p-6 tb:p-20 lg:p-24 flex flex-col items-center justify-center">
+      <section className="w-full h-full 2xs:py-4 xs:py-6 2sm:py-8 sm:py-6 tb:pt-20 tb:pb-10 lg:pt-24 lg:pb-12 flex flex-col items-center justify-center">
         <div className="relative">
           <img
             src={albumBg}
@@ -1041,45 +1041,42 @@ const Album = () => {
             ))}
           </div>
         </div>
-
         <div
-          className={`mt-8 mb-4 2xs:text-sm xs:text-base 2sm:text-base text-base font-bold text-center ${
+          className={`relative w-full h-auto 2xs:mt-4 2xs:px-4 2xs:py-2 xs:mt-6 xs:px-4 xs:py-2 2sm:mt-6 2sm:px-4 2sm:py-2 mt-8 px-6 py-8 bg-white ${
             backendData.length !== 7 ? '' : 'hidden'
           }`}
         >
-          선택한 멤버
-          <br />
-          <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-sm font-light">
-            멤버 또는 버튼을 클릭하면 선택 해제 가능
-          </p>
-          <ToastContainer autoClose={1000} closeOnClick limit={1} />
-        </div>
-        <div
-          className={`relative w-full h-auto 2xs:px-0 xs:px-0 2sm:px-0 px-20 py-4 flex flex-row 2xs:gap-2 xs:gap-2 2sm:gap-3 gap-4 justify-center items-center text-center bg-trasnparent ${
-            backendData.length !== 7 ? '' : 'hidden'
-          }`}
-        >
-          {textToShow.map(
-            (show, index) =>
-              show && (
-                <div
-                  key={index}
-                  onClick={() => handleAreaClick(index)}
-                  className="member-tag 2xs:w-16 2xs:h-6 xs:w-16 xs:h-6 2sm:w-16 2sm:h-6 w-20 h-8 rounded-[28px] text-white flex items-center justify-center cursor-pointer"
-                >
-                  <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-md font-bold">
-                    {areaNames[index].split(' ')[0]}
-                  </p>
-                </div>
-              ),
-          )}
+          <div className="w-full 2xs:mt-2 2xs:mb-1 xs:mt-3 xs:mb-2 2sm:mt-4 2sm:mb-3 mt-6 mb-6 2xs:text-[12px] xs:text-[14px] 2sm:text-[14px] text-[18px] font-bold text-center">
+            선택한 멤버
+            <br />
+            <p className="2xs:text-[10px] xs:text-[12px] 2sm:text-[12px] text-[14px] font-light">
+              멤버 또는 버튼을 클릭하면 선택 해제 가능
+            </p>
+            <ToastContainer autoClose={1000} closeOnClick limit={1} />
+          </div>
+          <div className="relative w-full h-auto 2xs:px-0 2xs:pt-1 2xs:pb-3 xs:px-0 xs:pt-1 xs:pb-4 2sm:px-0 2sm:pt-1 2sm:pb-4 px-20 pt-0 pb-4 flex flex-row 2xs:gap-2 xs:gap-2 2sm:gap-3 gap-4 justify-center items-center text-center bg-trasnparent">
+            {textToShow.map(
+              (show, index) =>
+                show && (
+                  <div
+                    key={index}
+                    onClick={() => handleAreaClick(index)}
+                    className="member-tag 2xs:w-16 2xs:h-6 xs:w-16 xs:h-6 2sm:w-16 2sm:h-6 w-20 h-8 rounded-[28px] text-white flex items-center justify-center cursor-pointer"
+                  >
+                    <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-md font-bold">
+                      {areaNames[index].split(' ')[0]}
+                    </p>
+                  </div>
+                ),
+            )}
+          </div>
         </div>
       </section>
-      <section className="w-full h-auto m-auto items-center bg-transparent 2xs:px-6 2xs:py-6 xs:px-8 xs:py-6 2sm:px-8 2sm:py-6 sm:px-10 sm:py-6 tb:px-10 tb:py-10 lg:px-36 lg:py-10 flex flex-col gap-4">
+      <section className="w-full h-auto m-auto items-center bg-transparent 2xs:px-6 2xs:pt-0 2xs:pb-4 xs:px-6 xs:pt-0 xs:pb-4 2sm:px-8 2sm:pt-0 2sm:pb-4 sm:px-10 sm:py-6 tb:px-10 lg:px-36 pt-0 pb-6 flex flex-col gap-4">
         {backendData.length === 7 ? (
           <>
             <ResultCard text="액자에서 멤버를 선택해주세요" />
-            <TipCard />
+            <CountingCard />
           </>
         ) : backendData.length === 0 ? (
           <ResultCard text="유닛 이름이 아직 없습니다..!" />
