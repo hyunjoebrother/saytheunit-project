@@ -58,7 +58,7 @@ app.post("/api/getMembersData", async (req, res) => {
     `;
 
     if (selectedMembers.length === 0) {
-      res.json(null)
+      res.json([0,0,0,0,0,0,0]) // fake data which length 7
     }
     if (commonUnitNames.length === 0) {
       res.json([]);

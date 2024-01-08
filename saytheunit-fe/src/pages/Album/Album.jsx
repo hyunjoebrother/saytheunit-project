@@ -1066,7 +1066,7 @@ const Album = () => {
         </div>
       </section>
       <section className="w-full h-auto m-auto items-center bg-transparent 2xs:px-6 2xs:py-6 xs:px-8 xs:py-6 2sm:px-8 2sm:py-6 sm:px-10 sm:py-6 tb:px-10 tb:py-10 lg:px-36 lg:py-10 flex flex-col gap-4">
-        {backendData === null ? (
+        {backendData.length === 7 ? (
           <ResultCard text="멤버를 선택해주세요" />
         ) : backendData.length === 0 ? (
           <ResultCard text="유닛 이름이 아직 없습니다..!" />
