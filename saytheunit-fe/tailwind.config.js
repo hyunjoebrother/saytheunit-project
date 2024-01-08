@@ -19,6 +19,7 @@ module.exports = {
       },
       fontFamily: {
         scriptFont: ['scriptFont'],
+        sayingFont: ['sayingFont'],
       },
     },
   },

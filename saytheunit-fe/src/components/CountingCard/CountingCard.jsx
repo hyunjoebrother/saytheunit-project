@@ -41,17 +41,24 @@ const CountingCard = () => {
   return (
     <section className="w-full 2sm:w-[326px] sm:w-[480px] tb:w-[560px] lg:w-[600px] flex h-auto 2xs:rounded-[10px] rounded-2xl bg-[#c9f4ed] 2xs:px-4 xs:px-2 2sm:px-4 px-10 py-4">
       <div className="flex flex-col gap-2 m-auto text-center items-center justify-center">
-        <p className="2xs:text-lg text-xl font-bold text-[#00dcb6]">
-          "{count}
-          <span className="ml-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold text-black">
+        <p className="2xs:text-[20px] text-[24px] font-extrabold text-[#00dcb6]">
+          <span className="font-sayingFont">"</span>
+          {count}
+          <span className="font-sayingFont">"</span>
+          {/* <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold text-black">
             개의 유닛
-          </span>
-          "
+          </span> */}
         </p>
         <p className="font-scriptFont tip-text 2xs:text-[10px] xs:text-sm 2sm:text-sm text-black">
           세븐틴 멤버 13명을 기준으로 2~12명 조합을 만든다고 가정했을 때,
           <br />
-          발생할 수 있는 조합의 수는 다음과 같다. [위버스 매거진]
+          발생할 수 있는 조합의 수는 다음과 같다.{' '}
+          <a
+            className="no-underline"
+            href="https://magazine.weverse.io/bridge/ko/422"
+          >
+            [위버스 매거진]
+          </a>
         </p>
       </div>
     </section>
