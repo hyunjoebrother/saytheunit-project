@@ -12,3 +12,10 @@ body {
     font-weight: 400;
     src: url('/public/font/NanumBrushScript-Regular.ttf');
 }
+
+@font-face {
+    font-family: 'sayingFont';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/public/font/Lexend-VariableFont_wght.ttf');
+}

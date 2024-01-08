@@ -1074,15 +1074,19 @@ const Album = () => {
       </section>
       <section className="w-full h-auto m-auto items-center bg-transparent 2xs:px-6 2xs:pt-0 2xs:pb-4 xs:px-6 xs:pt-0 xs:pb-4 2sm:px-8 2sm:pt-0 2sm:pb-4 sm:px-10 sm:py-6 tb:px-10 lg:px-36 pt-0 pb-6 flex flex-col gap-4">
         {backendData.length === 7 ? (
-          <>
+          <div className="resultcard w-full flex flex-col gap-4 m-auto items-center">
             <ResultCard text="액자에서 멤버를 선택해주세요" />
             <CountingCard />
-          </>
+          </div>
         ) : backendData.length === 0 ? (
-          <ResultCard text="유닛 이름이 아직 없습니다..!" />
+          <div className="resultcard w-full">
+            <ResultCard text="유닛 이름이 아직 없습니다..!" />
+          </div>
         ) : (
           backendData.map((data, index) => (
-            <ResultCard text={null} key={index} result={data} />
+            <div className="resultcard w-full">
+              <ResultCard text={null} key={index} result={data} />
+            </div>
           ))
         )}
       </section>
