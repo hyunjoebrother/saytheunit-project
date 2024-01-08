@@ -4,10 +4,10 @@ import Album from '../Album/Album';
 
 const Main = () => {
   return (
-    <>
+    <div className="bg-diamondBg bg-repeat bg-contain">
       <Header />
       <Album />
-    </>
+    </div>
   );
 };
 
