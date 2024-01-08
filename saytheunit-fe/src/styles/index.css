@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'scriptFont';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/public/font/NanumBrushScript-Regular.ttf');
+}
