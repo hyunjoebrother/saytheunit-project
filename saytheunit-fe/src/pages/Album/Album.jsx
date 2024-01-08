@@ -1084,8 +1084,8 @@ const Album = () => {
           </div>
         ) : (
           backendData.map((data, index) => (
-            <div className="resultcard w-full">
-              <ResultCard text={null} key={index} result={data} />
+            <div className="resultcard w-full" key={index}>
+              <ResultCard text={null} result={data} />
             </div>
           ))
         )}
