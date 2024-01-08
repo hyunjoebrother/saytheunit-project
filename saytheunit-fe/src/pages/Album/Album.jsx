@@ -6,6 +6,7 @@ import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
 import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
 import bongbong from '../../assets/images/bongbong.png';
+import TipCard from '../../components/TipCard/TipCard';
 
 const Album = () => {
   const [textToShow, setTextToShow] = useState(Array(13).fill(false));
@@ -1040,7 +1041,12 @@ const Album = () => {
             ))}
           </div>
         </div>
-        <div className="mt-8 mb-4 2xs:text-sm xs:text-base 2sm:text-base text-base font-bold text-center">
+
+        <div
+          className={`mt-8 mb-4 2xs:text-sm xs:text-base 2sm:text-base text-base font-bold text-center ${
+            backendData.length !== 7 ? '' : 'hidden'
+          }`}
+        >
           선택한 멤버
           <br />
           <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-sm font-light">
@@ -1048,7 +1054,11 @@ const Album = () => {
           </p>
           <ToastContainer autoClose={1000} closeOnClick limit={1} />
         </div>
-        <div className="relative w-full h-auto 2xs:px-0 xs:px-0 2sm:px-0 px-20 py-4 flex flex-row 2xs:gap-2 xs:gap-2 2sm:gap-3 gap-4 justify-center items-center text-center bg-trasnparent">
+        <div
+          className={`relative w-full h-auto 2xs:px-0 xs:px-0 2sm:px-0 px-20 py-4 flex flex-row 2xs:gap-2 xs:gap-2 2sm:gap-3 gap-4 justify-center items-center text-center bg-trasnparent ${
+            backendData.length !== 7 ? '' : 'hidden'
+          }`}
+        >
           {textToShow.map(
             (show, index) =>
               show && (
@@ -1067,7 +1077,10 @@ const Album = () => {
       </section>
       <section className="w-full h-auto m-auto items-center bg-transparent 2xs:px-6 2xs:py-6 xs:px-8 xs:py-6 2sm:px-8 2sm:py-6 sm:px-10 sm:py-6 tb:px-10 tb:py-10 lg:px-36 lg:py-10 flex flex-col gap-4">
         {backendData.length === 7 ? (
-          <ResultCard text="멤버를 선택해주세요" />
+          <>
+            <ResultCard text="액자에서 멤버를 선택해주세요" />
+            <TipCard />
+          </>
         ) : backendData.length === 0 ? (
           <ResultCard text="유닛 이름이 아직 없습니다..!" />
         ) : (

@@ -9,7 +9,7 @@ const ResultCard = ({ result, text }) => {
   }
 
   return (
-    <section className="w-full 2sm:w-[326px] sm:w-[480px] tb:w-[560px] lg:w-[600px] flex h-auto 2xs:rounded-[10px] rounded-2xl bg-white px-10 py-4">
+    <section className="w-full 2sm:w-[326px] sm:w-[480px] tb:w-[560px] lg:w-[600px] flex h-auto 2xs:rounded-[10px] rounded-2xl bg-white 2xs:px-4 xs:px-2 2sm:px-4 px-10 py-4">
       {isUnit ? (
         <div className="flex flex-col text-left items-start justify-center">
           <ul className="list-none text-left gap-2">

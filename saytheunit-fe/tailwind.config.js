@@ -17,6 +17,9 @@ module.exports = {
         // svtAlbumBg: "url('/src/assets/images/svt-total-bg.jpeg')",
         diamondBg: "url('/src/assets/images/diamond-wallbg.png')",
       },
+      fontFamily: {
+        scriptFont: ['scriptFont'],
+      },
     },
   },
   plugins: [],
