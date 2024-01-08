@@ -29,7 +29,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
 });
 
-
 app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
   console.log("선택 멤버", selectedMembers);
@@ -58,6 +57,9 @@ app.post("/api/getMembersData", async (req, res) => {
         .join(", ")})
     `;
 
+    if (selectedMembers.length === 0) {
+      res.json(null)
+    }
     if (commonUnitNames.length === 0) {
       res.json([]);
     }  else {
