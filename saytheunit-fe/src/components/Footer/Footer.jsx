@@ -2,8 +2,15 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full 2xs:h-12 xs:h-14 2sm:h-14 sm:h-16 tb:h-20 lg:h-28 bg-[#b3d8ef] text-2xl text-white flex items-center justify-center">
-      푸터입니다
+    <footer className="w-full py-3 bg-transparent 2xs:text-[18px] xs:text-[20px] 2sm:text-[20px] sm:text-[22px] text-[24px] lg:text-[28px] font-scriptFont text-black flex items-start justify-center">
+      <a
+        href="https://linkbio.co/6010904ydlS94"
+        className="no-underline"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Contact Mei
+      </a>
     </footer>
   );
 };
