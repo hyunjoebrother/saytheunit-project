@@ -5,7 +5,7 @@ const SurveyCard = () => {
   const [count, setCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
-  const end = 8177;
+  const end = 23;
   const duration = 1000;
 
   const frameRate = 1000 / 60;
