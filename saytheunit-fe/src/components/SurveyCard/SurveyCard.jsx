@@ -56,7 +56,7 @@ const SurveyCard = () => {
             className="no-underline font-bold"
             target="_blank"
             rel="noreferrer noopener"
-            href="https://forms.gle/vM351CwNrXfJhPHr5"
+            href="https://forms.gle/4J8qkMRFCnDfASRXA"
           >
             <button className="ml-2 w-auto h-auto px-3 py-2 bg-white text-[#4193c6] rounded-md font-extrabold">
               유닛 이름 짓기 참여하기

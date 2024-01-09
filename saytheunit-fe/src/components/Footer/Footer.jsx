@@ -57,27 +57,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full 2xs:py-3 xs:py-3 2sm:py-3 sm:py-3 tb:py-4 lg:py-5 bg-transparent 2xs:text-[18px] xs:text-[20px] 2sm:text-[20px] sm:text-[22px] text-[24px] lg:text-[28px] font-scriptFont text-black flex items-center justify-around">
-      <div className="flex flex-row list-none 2xs:gap-2 xs:gap-2 gap-3">
+    <footer className="w-full 2xs:py-3 xs:py-4 2sm:py-4 sm:py-4 tb:py-6 lg:py-6 bg-transparent 2xs:text-[18px] xs:text-[20px] 2sm:text-[20px] sm:text-[28px] text-[28px] font-scriptFont text-black flex items-center justify-around">
+      <div className="flex flex-row list-none 2xs:gap-2 gap-3 lg:gap-4">
         <li onClick={() => shareKakao()}>
           <img
             src={kakao}
             alt=""
-            className="2xs:w-5 xs:w-5 2sm:w-6 sm:w-6 tb:w-8 lg:w-10"
+            className="2xs:w-6 xs:w-7 2sm:w-8 sm:w-10 tb:w-10 lg:w-12"
           />
         </li>
         <li onClick={() => shareTwitter()}>
           <img
             src={twitter}
             alt=""
-            className="2xs:w-5 xs:w-5 2sm:w-6 sm:w-6 tb:w-8 lg:w-10"
+            className="2xs:w-6 xs:w-7 2sm:w-8 sm:w-10 tb:w-10 lg:w-12"
           />
         </li>
         <li onClick={() => handleCopyClipBoard('https://saytheunit.com/')}>
           <img
             src={clip}
             alt=""
-            className="2xs:w-5 xs:w-5 2sm:w-6 sm:w-6 tb:w-8 lg:w-10"
+            className="2xs:w-6 xs:w-7 2sm:w-8 sm:w-10 tb:w-10 lg:w-12"
           />
         </li>
       </div>
