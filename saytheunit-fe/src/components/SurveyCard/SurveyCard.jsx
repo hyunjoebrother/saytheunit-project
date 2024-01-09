@@ -51,7 +51,7 @@ const SurveyCard = () => {
           </span>
         </p>
         <div className="2xs:text-[10px] xs:text-sm 2sm:text-sm">
-          나도 한번 지어볼까?! >>>
+          나도 한번 지어볼까?! &gt;&gt;&gt;
           <a
             className="no-underline font-bold"
             href="https://forms.gle/vM351CwNrXfJhPHr5"
