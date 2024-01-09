@@ -15,6 +15,7 @@ const Footer = () => {
       kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
+          title: 'Say The Unit',
           description:
             '세세세...Say The Unit! 세븐틴 유닛은 총 8,177개가 나올 수 있는데 같이 유닛 이름 짓기할래?!',
           imageUrl: 'https://saytheunit.com/album-image.png',
