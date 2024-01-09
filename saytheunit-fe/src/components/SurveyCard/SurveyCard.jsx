@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 
 const SurveyCard = () => {
@@ -6,7 +6,7 @@ const SurveyCard = () => {
   const [isAnimating, setIsAnimating] = useState(true);
 
   const end = 23;
-  const duration = 1000;
+  const duration = 1700;
 
   const frameRate = 1000 / 60;
   const totalFrame = Math.round(duration / frameRate);
@@ -40,29 +40,34 @@ const SurveyCard = () => {
 
   return (
     <section className="w-full h-auto bg-[#4193c6] text-white 2xs:px-4 xs:px-2 2sm:px-4 px-10 py-6">
-      <div className="flex flex-col gap-2 m-auto text-center items-center justify-center">
-        <p className="2xs:text-[20px] text-[24px] font-extrabold text-[#00dcb6]">
-          <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold">
+      <div className="flex flex-col gap-3 m-auto text-center items-center justify-center">
+        <p className="tip-text 2xs:text-[20px] text-[24px] font-extrabold text-[#00dcb6]">
+          <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-base text-base font-semibold text-white">
             현재
           </span>
-          <span className="font-sayingFont">"</span>
           {count}
-          <span className="font-sayingFont">"</span>
-          <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold">
+          <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-base text-base font-semibold text-white">
             개의 유닛 이름이 있어요!
           </span>
         </p>
-        <p className="tip-text 2xs:text-[10px] xs:text-sm 2sm:text-sm">
-          내가 한 번 지어볼까?!
+        <div className="2xs:text-[10px] xs:text-sm 2sm:text-sm">
+          나도 한번 지어볼까?! >>>
           <a
-            className="no-underline text-[#00dcb6] font-bold"
-            href="https://magazine.weverse.io/article/view?lang=ko&num=422"
+            className="no-underline font-bold"
+            href="https://forms.gle/vM351CwNrXfJhPHr5"
           >
-            유닛 이름짓기 참여하기
+            <button className="ml-2 w-auto h-auto px-3 py-2 bg-white text-[#4193c6] rounded-md font-extrabold">
+              유닛 이름 짓기 참여하기
+            </button>
           </a>
+        </div>
+        <div className="mt-3 2sm:text-[10px]">
+          유닛 조합은{' '}
+          <span className="text-[#00dcb6] font-semibold">개인 1명부터 4명</span>
+          까지 제한되며, 중복된 이름은 제외합니다.
           <br />
-          중복된 이름은 제외합니다. 업데이트 기간 소요 1.7일 내
-        </p>
+          자세한 내용은 참여하기 버튼을 클릭해주세요
+        </div>
       </div>
     </section>
   );
