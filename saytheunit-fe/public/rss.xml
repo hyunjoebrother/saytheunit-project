@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Say The Unit</title>
+        <link>https://saytheunit.com/</link>
+        <description>총 8,177가지 세븐틴 유닛 이름 짓기</description>
+
+        <item>
+            <title>세븐틴 멤버 선택</title>
+            <link>https://saytheunit.com/</link>
+            <description>액자에서 세븐틴 멤버 선택하기</description>
+            <pubDate>Sun, 17 Dec 2023</pubDate>
+            <guid>https://saytheunit.com/</guid>
+        </item>
+        <item>
+            <title>세븐틴 유닛 조합 결과</title>
+            <link>https://saytheunit.com/</link>
+            <description>선택한 멤버 유닛 이름 결과</description>
+            <pubDate>Sun, 17 Dec 2023</pubDate>
+            <guid>https://saytheunit.com/</guid>
+        </item>
+        <item>
+            <title>방문자 수 조회</title>
+            <link>https://saytheunit.com/</link>
+            <description>웹사이트에 방문한 캐럿, 큐빅, 당근들 수</description>
+            <pubDate>Sun, 17 Dec 2023</pubDate>
+            <guid>https://saytheunit.com/</guid>
+        </item>
+        <item>
+            <title>SnapshootPDF 안내</title>
+            <link>https://saytheunit.com/</link>
+            <description>PDF 증거자료 수집 크롬 익스텐션 안내</description>
+            <pubDate>Sun, 17 Dec 2023</pubDate>
+            <guid>https://saytheunit.com/</guid>
+        </item>
+        <item>
+            <title>푸터</title>
+            <link>https://saytheunit.com/</link>
+            <description>SNS 공유 및 개발자 Mei 연락망</description>
+            <pubDate>Sun, 17 Dec 2023</pubDate>
+            <guid>https://saytheunit.com/</guid>
+        </item>
+    </channel>
+</rss>
