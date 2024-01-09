@@ -17,7 +17,7 @@ const Footer = () => {
         content: {
           description:
             '세세세...Say The Unit! 세븐틴 유닛은 총 8,177개가 나올 수 있는데 같이 유닛 이름 짓기할래?!',
-          imageUrl: window.location.href + '/og-image.png',
+          imageUrl: 'https://saytheunit.com/album-image.png',
           link: {
             mobileWebUrl: 'https://saytheunit.com/',
             webUrl: 'https://saytheunit.com/',
