@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
 
-const CountingCard = () => {
+const HitCard = () => {
   const [count, setCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
@@ -39,30 +39,32 @@ const CountingCard = () => {
   }, [end, isAnimating, totalFrame]);
 
   return (
-    <section className="w-full 2sm:w-[326px] sm:w-[480px] tb:w-[560px] lg:w-[600px] flex h-auto 2xs:rounded-[10px] rounded-2xl bg-white 2xs:px-4 xs:px-2 2sm:px-4 px-10 py-4">
+    <section className="w-full 2sm:w-[326px] sm:w-[480px] tb:w-[560px] lg:w-[600px] h-auto 2xs:rounded-[10px] xs:rounded-[12px] rounded-2xl bg-white text-black 2xs:px-4 xs:px-2 2sm:px-4 px-10 py-6">
       <div className="flex flex-col gap-2 m-auto text-center items-center justify-center">
         <p className="2xs:text-[20px] text-[24px] font-extrabold text-[#00dcb6]">
+          <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold">
+            현재 방문한 당근들
+          </span>
           <span className="font-sayingFont">"</span>
           {count}
           <span className="font-sayingFont">"</span>
-          {/* <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold text-black">
-            개의 유닛
-          </span> */}
+          <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold">
+            명
+          </span>
         </p>
-        <p className="font-scriptFont tip-text 2xs:text-[10px] xs:text-sm 2sm:text-sm text-black">
-          세븐틴 멤버 13명을 기준으로 2~12명 조합을 만든다고 가정했을 때,
-          <br />
-          발생할 수 있는 조합의 수는 다음과 같다.{' '}
+        <p className="tip-text 2xs:text-[10px] xs:text-sm 2sm:text-sm">
+          내가 한 번 지어볼까?!
           <a
-            className="no-underline text-[#00dcb6]"
+            className="no-underline text-[#00dcb6] font-bold"
             href="https://magazine.weverse.io/article/view?lang=ko&num=422"
           >
-            [위버스 매거진]
+            HIT
           </a>
+          <br />
         </p>
       </div>
     </section>
   );
 };
 
-export default CountingCard;
+export default HitCard;
