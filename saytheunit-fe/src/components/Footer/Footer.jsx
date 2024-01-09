@@ -15,9 +15,9 @@ const Footer = () => {
       kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
-          title: 'Say The Unit',
-          description: '설명',
-          imageUrl: window.location.href + '/src/assets/images/carrot-icon.png',
+          description:
+            '세세세...Say The Unit! 세븐틴 유닛은 총 8,177개가 나올 수 있는데 같이 유닛 이름 짓기할래?!',
+          imageUrl: window.location.href + '/og-image.png',
           link: {
             mobileWebUrl: 'https://saytheunit.com/',
             webUrl: 'https://saytheunit.com/',
@@ -38,7 +38,7 @@ const Footer = () => {
 
   const shareTwitter = () => {
     let sendText =
-      '세세세...Say The Unit! 같이 세븐틴 유닛 이름 짓기할래? 고고고~!';
+      '세세세...Say The Unit! 세븐틴 유닛은 총 8,177개가 나올 수 있는데 같이 유닛 이름 짓기할래?!';
     let sendUrl = 'https://saytheunit.com/'; // 전달할 URL
     window.open(
       'https://twitter.com/intent/tweet?text=' + sendText + '&url=' + sendUrl,
