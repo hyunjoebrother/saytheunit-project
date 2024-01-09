@@ -55,6 +55,8 @@ const CountingCard = () => {
           발생할 수 있는 조합의 수는 다음과 같다.{' '}
           <a
             className="no-underline text-[#00dcb6]"
+            target="_blank"
+            rel="noreferrer noopener"
             href="https://magazine.weverse.io/article/view?lang=ko&num=422"
           >
             [위버스 매거진]

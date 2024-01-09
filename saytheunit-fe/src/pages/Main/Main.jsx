@@ -19,22 +19,24 @@ const Main = () => {
     <div className="bg-diamondBg bg-repeat bg-contain w-full flex flex-col m-auto items-center">
       <Header />
       <Album />
-      <div className="mt-16 w-full flex">
+      <div className="mt-10 w-full flex">
         <SurveyCard />
       </div>
-      <div className="mt-16 flex">
+      <div className="mt-14 flex">
         <HitCard />
       </div>
-      <div className="mt-0 mb-12 w-full flex flex-col m-auto items-center">
+      <div className="mt-0 mb-16 w-full flex flex-col m-auto items-center">
         <div className="w-full py-6 flex flex-col m-auto items-center">
           <img
             onClick={toggleSnapshoot}
             src={camera}
             alt=""
-            className="camera 2sm:w-40"
+            className="camera 2xs:w-32 xs:w-36 2sm:w-40 sm:w-[200px] tb:w-[248px] lg:w-[260px]"
           />
           {!showSnapshoot && (
-            <p className="2sm:text-[12px]">카메라를 클릭해보세요!</p>
+            <p className="2xs:text-[10px] xs:text-[10px] 2sm:text-[12px] sm:text-[14px] text-[16px]">
+              카메라를 클릭해보세요!
+            </p>
           )}
         </div>
         {showSnapshoot && <SnapshootCard />}
