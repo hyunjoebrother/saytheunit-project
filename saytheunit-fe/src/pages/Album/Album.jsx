@@ -67,7 +67,7 @@ const Album = () => {
         ),
       });
       // console.log(response.data); // 받은 데이터 출력
-      if (response.data.length === 0) {
+      if (response.data[1].length === 0) {
         // console.log('받은 데이터 없어용', response.data);
         setBackendData(response.data);
       } else {
