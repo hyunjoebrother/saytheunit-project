@@ -167,13 +167,6 @@ const Album = () => {
 
   return (
     <>
-      <head>
-        <link
-          rel="preload"
-          href="../../assets/images/svt-total-bg-frame.jpg"
-          as="image"
-        />
-      </head>
       <section className="w-full h-full 2xs:py-4 xs:py-6 2sm:py-8 sm:py-6 tb:pt-20 tb:pb-10 lg:pt-24 lg:pb-12 flex flex-col items-center justify-center">
         <div className="relative">
           <img
