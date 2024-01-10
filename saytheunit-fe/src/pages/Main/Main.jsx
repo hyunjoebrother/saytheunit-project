@@ -16,7 +16,7 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-diamondBg bg-repeat bg-contain w-full flex flex-col m-auto items-center">
+    <div className="bg-diamondBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
       <Header />
       <Album />
       <div className="mt-10 w-full flex">
@@ -31,7 +31,7 @@ const Main = () => {
             onClick={toggleSnapshoot}
             src={camera}
             alt=""
-            className="camera 2xs:w-32 xs:w-36 2sm:w-40 sm:w-[200px] tb:w-[248px] lg:w-[260px]"
+            className="camera 2xs:w-32 2xs:h-[170px] xs:w-36 xs:h-[192px] 2sm:w-40 2sm:h-[212px] sm:w-[200px] sm:h-[266px] tb:w-[248px] tb:h-[330px] lg:w-[260px] lg:h-[346px]"
           />
           {!showSnapshoot && (
             <p className="2xs:text-[10px] xs:text-[10px] 2sm:text-[12px] sm:text-[14px] text-[16px]">

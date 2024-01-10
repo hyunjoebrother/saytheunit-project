@@ -8,7 +8,7 @@ const Header = () => {
         <img
           src={logo}
           alt="Say The Unit"
-          className="2xs:w-32 xs:w-36 2sm:w-[172px] sm:w-[200px] tb:w-[236px] lg:w-[280px] cursor-pointer"
+          className="2xs:w-32 2xs:h-7 xs:w-36 xs:h-8 2sm:w-[172px] 2sm:h-[38px] sm:w-[200px] sm:h-11 tb:w-[236px] tb:h-[52px] lg:w-[280px] lg:h-[62px] cursor-pointer"
         />
       </a>
     </header>

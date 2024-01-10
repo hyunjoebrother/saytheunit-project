@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 @font-face {
-    font-family: 'scriptFont';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/public/font/NanumBrushScript-Regular.ttf');
+  font-family: 'scriptFont';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/public/font/NanumBrushScript-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'sayingFont';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/public/font/Lexend-VariableFont_wght.ttf');
+  font-family: 'sayingFont';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/public/font/Lexend-VariableFont_wght.woff') format('woff');
 }
