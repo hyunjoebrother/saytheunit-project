@@ -15,6 +15,11 @@ const Album = () => {
   const [selectedAreas, setSelectedAreas] = useState([]); // 태그 수 제한
   const [backendData, setBackendData] = useState([]);
 
+  useEffect(() => {
+    const image = new Image();
+    image.src = albumBg;
+  }, []);
+
   const handleAreaClick = index => {
     if (selectedAreas.length === 4 && !selectedAreas.includes(index)) {
       toast.warning('최대 4명까지 선택할 수 있습니다.', {
@@ -170,7 +175,6 @@ const Album = () => {
       <section className="w-full h-full 2xs:py-4 xs:py-6 2sm:py-8 sm:py-6 tb:pt-20 tb:pb-10 lg:pt-24 lg:pb-12 flex flex-col items-center justify-center">
         <div className="relative">
           <img
-            fetchpriority="high"
             src={albumBg}
             alt="Album Background"
             useMap="#albumMap2xs"
