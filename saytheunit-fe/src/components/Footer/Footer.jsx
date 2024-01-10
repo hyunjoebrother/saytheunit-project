@@ -15,7 +15,7 @@ const Footer = () => {
       kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
-          title: 'Say The Unit',
+          title: 'Say The Unit - 세더유닛',
           description:
             '세세세...Say The Unit! 같이 세븐틴 유닛 이름 짓기할래?!',
           imageUrl: 'https://saytheunit.com/album-image.png',
@@ -26,7 +26,7 @@ const Footer = () => {
         },
         buttons: [
           {
-            title: '세븐틴 유닛 구경하기',
+            title: '세더유닛 구경하기',
             link: {
               mobileWebUrl: 'https://saytheunit.com/',
               webUrl: 'https://saytheunit.com/',
