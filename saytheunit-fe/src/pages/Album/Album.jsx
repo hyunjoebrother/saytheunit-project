@@ -15,11 +15,6 @@ const Album = () => {
   const [selectedAreas, setSelectedAreas] = useState([]); // 태그 수 제한
   const [backendData, setBackendData] = useState([]);
 
-  useEffect(() => {
-    const image = new Image();
-    image.src = albumBg;
-  }, []);
-
   const handleAreaClick = index => {
     if (selectedAreas.length === 4 && !selectedAreas.includes(index)) {
       toast.warning('최대 4명까지 선택할 수 있습니다.', {

@@ -10,7 +10,7 @@ const HitCard = () => {
           <img
             src={carrot}
             alt=""
-            className="flex m-auto mb-3 tb:mb-5 lg:mb-6 w-20 tb:w-24 lg:w-28"
+            className="flex m-auto mb-3 tb:mb-5 lg:mb-6 w-20 tb:w-24 lg:w-28 h-20 tb:h-24 lg:h-28"
           />
           <p>
             <span className="2xs:text-[10px] xs:text-xs 2sm:text-xs text-sm font-semibold text-black">
@@ -20,6 +20,7 @@ const HitCard = () => {
               <a href="https://hits.sh/saytheunit.com/">
                 <img
                   alt="Hits"
+                  className="w-full h-full"
                   src="https://hits.sh/saytheunit.com.svg?label=HITs&color=ffffff&labelColor=fda73e"
                 />
               </a>

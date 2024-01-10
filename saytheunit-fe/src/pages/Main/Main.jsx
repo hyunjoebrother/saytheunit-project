@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import './index.css';
 import Header from '../../components/Header/Header';
 import Album from '../Album/Album';
@@ -14,6 +14,15 @@ const Main = () => {
   const toggleSnapshoot = () => {
     setShowSnapshoot(!showSnapshoot);
   };
+
+  const hoverImgPreload = () => {
+    let img = new Image();
+    img.src = '/src/assets/images/svt-total-bg-frame.jpg';
+  };
+
+  useLayoutEffect(() => {
+    hoverImgPreload();
+  }, []);
 
   return (
     <div className="bg-diamondBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
