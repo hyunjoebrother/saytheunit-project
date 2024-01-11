@@ -35,6 +35,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
 });
 
+app.get("*", (req, res) => {
+  res.status(404);
+  res.sendFile(path.join(__dirname, "./public/wrong-path.html"));
+});
+
+
 app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
   console.log("선택 멤버", selectedMembers);
