@@ -17,7 +17,7 @@ const Main = () => {
 
   const hoverImgPreload = () => {
     let img = new Image();
-    img.src = '/src/assets/images/svt-total-bg-frame.jpg';
+    img.src = '/svt-total-bg-frame.jpg';
   };
 
   useLayoutEffect(() => {
