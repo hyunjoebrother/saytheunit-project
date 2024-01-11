@@ -20,13 +20,19 @@ connection.connect((err) => {
   console.log("Connected to MySQL database");
 });
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 
-// app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
+app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
+
+// Error Handling
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.sendFile(path.join(__dirname, "public/service-update-page.jpg"));
+});
 
 app.get("/", (req, res) => {
-  // res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
+  res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
 });
 
 app.post("/api/getMembersData", async (req, res) => {
@@ -109,7 +115,7 @@ app.post("/api/getMembersData", async (req, res) => {
     `;
 
     if (selectedMembers.length === 0) {
-      res.json([0, 0, 0, 0, 0, 0, 0]); // fake data which length 7
+      res.json([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); // fake data which length 17
     }
     if (commonUnitNames.length === 0) {
       res.json([]);
@@ -159,7 +165,7 @@ function findCommonUnitNames(arrays) {
 }
 
 // 서버 시작
-const PORT = 3000;
+const PORT = 1717;
 // const PORT = 3000; // develop port
 app.listen(PORT, () => {
   // console.log(`Server running on port ${PORT}`);
