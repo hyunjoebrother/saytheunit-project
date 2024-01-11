@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
-import albumBg from '/svt-total-bg-frame.jpg';
+import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
 import bongbong from '../../assets/images/bongbong.png';
 import CountingCard from '../../components/CountingCard/CountingCard';
 
