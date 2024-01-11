@@ -1,11 +1,14 @@
 img {
   width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
   img {
+    width: 100%;
     max-width: 600px;
     max-height: 800px;
+    height: auto;
     display: flex;
     margin: auto;
     align-items: center;

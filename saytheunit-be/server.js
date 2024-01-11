@@ -25,12 +25,6 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
 
-// Error Handling
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.sendFile(path.join(__dirname, "public/service-update-page.jpg"));
-});
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
 });
@@ -163,6 +157,12 @@ function findCommonUnitNames(arrays) {
     restArrays.every((array) => array.includes(value))
   );
 }
+
+// Error Handling
+app.use((req, res) => {
+  res.status(404);
+  res.sendFile(path.join(__dirname, "./public/wrong-path.html"));
+});
 
 // 서버 시작
 const PORT = 1717;
