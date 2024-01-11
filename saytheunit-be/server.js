@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const mysql = require("mysql2");
-const expressErrorHandler = require("express-error-handler");
 require("dotenv").config();
 const app = express();
 
@@ -27,14 +26,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
 
 // Error Handling
-const errorHander = expressErrorHandler({
-  static: {
-      '404' : './public/404.html'
-  }
+app.use((req, res) => {
+  res.status(404);
+  // res.sendFile(path.join(__dirname, "./public/404.html"));
 });
-
-app.use(expressErrorHandler.httpError(404));
-app.use(errorHandler);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
