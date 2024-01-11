@@ -25,21 +25,16 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
 
-// Error Handling
-app.use((req, res) => {
-  res.status(404);
-  res.sendFile(path.join(__dirname, "./public/404.html"));
-});
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../saytheunit-fe/build/index.html"));
 });
 
-app.get("*", (req, res) => {
+// Error Handling
+app.use((req, res) => {
   res.status(404);
-  res.sendFile(path.join(__dirname, "./public/wrong-path.html"));
+  res.sendFile(path.join(__dirname, "./public/404.html"));
 });
-
 
 app.post("/api/getMembersData", async (req, res) => {
   const { selectedMembers } = req.body;
