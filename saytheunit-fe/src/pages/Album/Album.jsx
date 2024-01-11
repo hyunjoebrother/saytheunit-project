@@ -1043,7 +1043,7 @@ const Album = () => {
         </div>
         <div
           className={`relative w-full h-auto 2xs:mt-4 2xs:px-4 2xs:py-2 xs:mt-6 xs:px-4 xs:py-2 2sm:mt-6 2sm:px-4 2sm:py-2 mt-8 px-6 py-8 bg-white ${
-            backendData.length !== 7 ? '' : 'hidden'
+            backendData.length !== 17 ? '' : 'hidden'
           }`}
         >
           <div className="w-full 2xs:mt-2 2xs:mb-1 xs:mt-3 xs:mb-2 2sm:mt-4 2sm:mb-3 mt-6 mb-6 2xs:text-[12px] xs:text-[14px] 2sm:text-[14px] text-[18px] font-bold text-center">
@@ -1073,7 +1073,7 @@ const Album = () => {
         </div>
       </section>
       <section className="w-full h-auto flex flex-col gap-4 m-auto items-center bg-transparent 2xs:px-6 2xs:pt-0 2xs:pb-4 xs:px-6 xs:pt-0 xs:pb-4 2sm:px-8 2sm:pt-0 2sm:pb-4 sm:px-10 sm:py-6 tb:px-10 lg:px-36 pt-0 pb-6">
-        {backendData.length === 7 ? (
+        {backendData.length === 17 ? (
           <div className="resultcard w-full flex flex-col gap-4 m-auto items-center">
             <ResultCard text="액자에서 멤버를 선택해주세요" />
             <CountingCard />
