@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, "../saytheunit-fe/build")));
 // Error Handling
 app.use((req, res) => {
   res.status(404);
-  // res.sendFile(path.join(__dirname, "./public/404.html"));
+  res.sendFile(path.join(__dirname, "./public/404.html"));
 });
 
 app.get("/", (req, res) => {
