@@ -17,14 +17,6 @@ const pool = mysql.createPool({
   enableKeepAlive: true,
 });
 
-connection.connect((err) => {
-  if (err) {
-    console.error("Error connecting to database:", err);
-    return;
-  }
-  console.log("Connected to MySQL database");
-});
-
 app.use(cors());
 app.use(express.json());
 
@@ -145,7 +137,7 @@ app.post("/api/getMembersData", async (req, res) => {
 
 function executeQuery(query) {
   return new Promise((resolve, reject) => {
-    connection.query(query, (err, results) => {
+    pool.query(query, (err, results) => {
       if (err) {
         reject(err);
       } else {
