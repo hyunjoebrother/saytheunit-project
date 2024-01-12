@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -14,6 +15,8 @@ const Album = () => {
   const [iconsVisibility, setIconsVisibility] = useState(Array(13).fill(false));
   const [selectedAreas, setSelectedAreas] = useState([]); // 태그 수 제한
   const [backendData, setBackendData] = useState([]);
+
+  const navigate = useNavigate();
 
   const handleAreaClick = index => {
     if (selectedAreas.length === 4 && !selectedAreas.includes(index)) {
@@ -66,12 +69,15 @@ const Album = () => {
           index => areaNames[index].split(' ')[1],
         ),
       });
-      // console.log(response.data); // 받은 데이터 출력
-      if (response.data.length === 0) {
+      console.log(response.data); // 받은 데이터 출력
+      if (response.status === 404) {
+        console.error('404 Error: Not Found');
+        navigate('/error');
+      } else if (response.data.length === 0) {
         // console.log('받은 데이터 없어용', response.data);
         setBackendData(response.data);
       } else {
-        // console.log('받은 데이터 있어용', response.data);
+        console.log('받은 데이터 있어용', response.data);
         setBackendData(response.data); // 여러 유닛 데이터 중 첫번째만
       }
     } catch (error) {
@@ -1043,7 +1049,7 @@ const Album = () => {
         </div>
         <div
           className={`relative w-full h-auto 2xs:mt-4 2xs:px-4 2xs:py-2 xs:mt-6 xs:px-4 xs:py-2 2sm:mt-6 2sm:px-4 2sm:py-2 mt-8 px-6 py-8 bg-white ${
-            backendData.length !== 17 ? '' : 'hidden'
+            backendData !== 'no select' ? '' : 'hidden'
           }`}
         >
           <div className="w-full 2xs:mt-2 2xs:mb-1 xs:mt-3 xs:mb-2 2sm:mt-4 2sm:mb-3 mt-6 mb-6 2xs:text-[12px] xs:text-[14px] 2sm:text-[14px] text-[18px] font-bold text-center">
@@ -1073,7 +1079,7 @@ const Album = () => {
         </div>
       </section>
       <section className="w-full h-auto flex flex-col gap-4 m-auto items-center bg-transparent 2xs:px-6 2xs:pt-0 2xs:pb-4 xs:px-6 xs:pt-0 xs:pb-4 2sm:px-8 2sm:pt-0 2sm:pb-4 sm:px-10 sm:py-6 tb:px-10 lg:px-36 pt-0 pb-6">
-        {backendData.length === 17 ? (
+        {backendData === 'no select' ? (
           <div className="resultcard w-full flex flex-col gap-4 m-auto items-center">
             <ResultCard text="액자에서 멤버를 선택해주세요 (4명까지 가능)" />
             <CountingCard />
