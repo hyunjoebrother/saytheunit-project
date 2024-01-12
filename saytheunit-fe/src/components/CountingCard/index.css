@@ -1,15 +1,23 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+.scriptFont {
+  font-family: 'Nanum Brush Script', cursive;
+}
 
-    to {
-        opacity: 1;
-        transform: none;
-    }
+.sayingFont {
+  font-family: 'Lexend', sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .tip-text {
-    animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }

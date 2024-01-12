@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 import kakao from '../../assets/images/icon-kakao.png';
 import twitter from '../../assets/images/icon-twitter.png';
 import clip from '../../assets/images/icon-clip.png';
@@ -57,7 +58,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full 2xs:py-3 xs:py-4 2sm:py-4 sm:py-4 tb:py-6 lg:py-6 bg-transparent 2xs:text-[18px] xs:text-[20px] 2sm:text-[20px] sm:text-[28px] text-[28px] font-scriptFont text-black flex items-center justify-around">
+    <footer className="scriptFont w-full 2xs:py-3 xs:py-4 2sm:py-4 sm:py-4 tb:py-6 lg:py-6 bg-transparent 2xs:text-[18px] xs:text-[20px] 2sm:text-[20px] sm:text-[28px] text-[28px] text-black flex items-center justify-around">
       <ul className="flex flex-row list-none 2xs:gap-2 gap-3 lg:gap-4">
         <li onClick={() => shareKakao()}>
           <img
