@@ -16,10 +16,6 @@ module.exports = {
       backgroundImage: {
         diamondBg: "url('/src/assets/images/diamond-wallbg.png')",
       },
-      fontFamily: {
-        scriptFont: ['scriptFont'],
-        sayingFont: ['sayingFont'],
-      },
     },
   },
   plugins: [],
