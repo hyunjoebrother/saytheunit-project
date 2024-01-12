@@ -106,9 +106,8 @@ app.post("/api/getMembersData", async (req, res) => {
     `;
 
     if (selectedMembers.length === 0) {
-      res.json([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); // fake data which length 17
-    }
-    if (commonUnitNames.length === 0) {
+      res.json("no select");
+    } else if (commonUnitNames.length === 0) {
       res.json([]);
     } else {
       const result = await executeQuery(findquery); // 한 명 일 때
@@ -132,6 +131,11 @@ app.post("/api/getMembersData", async (req, res) => {
     console.error("Error fetching data:", error);
     res.status(500).json({ error: "Error fetching data" });
     res.sendFile(path.join(__dirname, "./public/update.html"));
+
+    if (!res.headersSent) {
+      res.status(500).json({ error: "Error fetching data - header" });
+      res.sendFile(path.join(__dirname, "./public/update.html"));
+    }
   }
 });
 
