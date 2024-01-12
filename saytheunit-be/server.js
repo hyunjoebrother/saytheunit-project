@@ -5,11 +5,16 @@ const mysql = require("mysql2");
 require("dotenv").config();
 const app = express();
 
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: "root",
   password: process.env.DB_PASSWORD,
   database: "dev_saytheunit_db",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  keepAliveInitialDelay: 10000,
+  enableKeepAlive: true,
 });
 
 connection.connect((err) => {
@@ -134,6 +139,7 @@ app.post("/api/getMembersData", async (req, res) => {
   } catch (error) {
     console.error("Error fetching data:", error);
     res.status(500).json({ error: "Error fetching data" });
+    res.sendFile(path.join(__dirname, "./public/update.html"));
   }
 });
 
