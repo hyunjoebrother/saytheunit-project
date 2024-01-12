@@ -34,7 +34,7 @@ const ResultCard = ({ result, text }) => {
         </div>
       ) : (
         <div className="flex m-auto text-center items-center justify-center">
-          <p className="2xs:text-xs xs:text-sm 2sm:text-sm text-black">
+          <p className="2xs:text-[10px] xs:text-sm 2sm:text-sm text-black">
             {text}
           </p>
         </div>
