@@ -1,8 +1,12 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
+import { useLanguage } from '../../components/Translation/languageContext';
 import carrot from '../../assets/images/carrot-icon.png';
 import './index.css';
 
 const HitCard = () => {
+  const { language } = useLanguage();
+
   return (
     <section className="w-full h-auto 2xs:rounded-[10px] xs:rounded-[12px] rounded-2xl bg-white text-black 2xs:px-6 xs:px-6 2sm:px-6 px-10 py-6 tb:py-8 lg:py-10">
       <div className="flex flex-col gap-2 m-auto text-center items-center justify-center">
@@ -14,7 +18,7 @@ const HitCard = () => {
           />
           <p>
             <span className="2xs:text-[10px] xs:text-xs 2sm:text-xs text-sm font-semibold text-black">
-              방문자 수
+              <Trans i18nKey="translations:HitCount">방문자 수</Trans>
             </span>
             <div className="w-full flex m-auto items-center justify-center 2xs:text-xs xs:text-xs 2sm:text-xs text-sm font-semibold text-black">
               <a href="https://hits.sh/saytheunit.com/">

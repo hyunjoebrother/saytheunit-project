@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Trans } from 'react-i18next';
+import { useLanguage } from '../../components/Translation/languageContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -10,6 +12,7 @@ import bongbong from '../../assets/images/bongbong.png';
 import CountingCard from '../../components/CountingCard/CountingCard';
 
 const Album = () => {
+  const { language } = useLanguage();
   const [textToShow, setTextToShow] = useState(Array(13).fill(false));
   const [hoveredAreas, setHoveredAreas] = useState([]);
   const [iconsVisibility, setIconsVisibility] = useState(Array(13).fill(false));
@@ -1053,10 +1056,12 @@ const Album = () => {
           }`}
         >
           <div className="w-full 2xs:mt-2 2xs:mb-1 xs:mt-3 xs:mb-2 2sm:mt-4 2sm:mb-3 mt-6 mb-6 2xs:text-[12px] xs:text-[14px] 2sm:text-[14px] text-[18px] font-bold text-center">
-            선택한 멤버
+            <Trans i18nKey="translations:SelectMember">선택한 멤버</Trans>
             <br />
             <p className="2xs:text-[10px] xs:text-[12px] 2sm:text-[12px] text-[14px] font-light">
-              멤버 또는 버튼을 클릭하면 선택 해제 가능
+              <Trans i18nKey="translations:SelectMemberInfo">
+                멤버 또는 버튼을 클릭하면 선택 해제 가능
+              </Trans>
             </p>
             <ToastContainer autoClose={1000} closeOnClick limit={1} />
           </div>
