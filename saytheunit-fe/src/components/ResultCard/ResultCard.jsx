@@ -1,6 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../Translation/languageContext';
 
 const ResultCard = ({ result, text }) => {
+  const { language } = useLanguage();
+  const { t } = useTranslation();
   let isUnit = false;
   if (text === null) {
     isUnit = true;
@@ -35,7 +39,11 @@ const ResultCard = ({ result, text }) => {
       ) : (
         <div className="flex m-auto text-center items-center justify-center">
           <p className="2xs:text-[10px] xs:text-sm 2sm:text-sm text-black">
-            {text}
+            {text === '액자에서 멤버를 선택해주세요 (4명까지 가능)'
+              ? t('translations:StartSelect')
+              : text === '유닛 이름이 아직 없습니다..!'
+                ? t('translations:NoUnitData')
+                : text}
           </p>
         </div>
       )}

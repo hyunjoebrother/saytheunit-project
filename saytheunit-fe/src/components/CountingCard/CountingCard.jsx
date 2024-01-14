@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Trans } from 'react-i18next';
 import './index.css';
 
 const CountingCard = () => {
@@ -50,16 +51,20 @@ const CountingCard = () => {
           </span> */}
         </p>
         <p className="scriptFont tip-text 2xs:text-[10px] xs:text-sm 2sm:text-sm text-black">
-          세븐틴 멤버 13명을 기준으로 2~12명 조합을 만든다고 가정했을 때,
+          <Trans i18nKey="translations:WeverseInfo1">
+            세븐틴 멤버 13명을 기준으로 2~12명 조합을 만든다고 가정했을 때,
+          </Trans>
           <br />
-          발생할 수 있는 조합의 수는 다음과 같다.{' '}
+          <Trans i18nKey="translations:WeverseInfo2">
+            발생할 수 있는 조합의 수는 다음과 같다.{' '}
+          </Trans>
           <a
             className="no-underline text-[#00dcb6]"
             target="_blank"
             rel="noreferrer noopener"
             href="https://magazine.weverse.io/article/view?lang=ko&num=422"
           >
-            [위버스 매거진]
+            [<Trans i18nKey="translations:WeverseInfo3">위버스 매거진</Trans>]
           </a>
         </p>
       </div>

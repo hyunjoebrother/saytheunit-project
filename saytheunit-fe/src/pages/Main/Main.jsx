@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Trans } from 'react-i18next';
+import { useLanguage } from '../../components/Translation/languageContext';
 import './index.css';
 import Header from '../../components/Header/Header';
 import Album from '../Album/Album';
@@ -9,6 +11,7 @@ import Footer from '../../components/Footer/Footer';
 import camera from '../../assets/images/camera-icon.png';
 
 const Main = () => {
+  const { language } = useLanguage();
   const [showSnapshoot, setShowSnapshoot] = useState(false);
 
   const toggleSnapshoot = () => {
@@ -35,7 +38,9 @@ const Main = () => {
           />
           {!showSnapshoot && (
             <p className="2xs:text-[10px] xs:text-[10px] 2sm:text-[12px] sm:text-[14px] text-[16px]">
-              카메라를 클릭해보세요!
+              <Trans i18nKey="translations:ClickCamera">
+                카메라를 클릭해보세요!
+              </Trans>
             </p>
           )}
         </div>

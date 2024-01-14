@@ -1,7 +1,24 @@
 {
   "Korean": "한국어",
-  "English": "영어",
-  "welcome": "어서와",
-  "now": "현재",
-  "count": "개의 유닛 이름이 있어요!"
+  "English": "I Don’t Understand But I Luv U",
+  "StartSelect": "액자에서 멤버를 선택해주세요 (4명까지 가능)",
+  "WeverseInfo1": "세븐틴 멤버 13명을 기준으로 2~12명 조합을 만든다고 가정했을 때",
+  "WeverseInfo2": "발생할 수 있는 조합의 수는 다음과 같다.",
+  "WeverseInfo3": "위버스 매거진",
+  "SelectMember": "선택한 멤버",
+  "SelectMemberInfo": "멤버 또는 버튼을 클릭하면 선택 해제 가능",
+  "NoUnitData": "유닛 이름이 아직 없습니다..!",
+  "Now": "현재,",
+  "Count": "개의 유닛 이름이 있어요!",
+  "WannaTry": "나도 한번 지어볼까?!",
+  "SurveyBtn": "유닛 이름 짓기 참여하기",
+  "SurveyInfo1": "유닛 조합은",
+  "SurveyInfo2": "개인 1명부터 4명",
+  "SurveyInfo3": "까지 제한되며, 중복된 이름은 제외합니다.",
+  "SurveyInfo4": "자세한 내용은 참여하기 버튼을 클릭해주세요",
+  "HitCount": "방문자 수",
+  "ClickCamera": "카메라를 클릭해보세요!",
+  "SnapshootInfo1": "쉽고, 편하고, 한번에 PDF 증거자료를 수집하고 싶다면?",
+  "SnapshootInfo2": "SnapshootPDF 사용해보기",
+  "SnapshootInfo3": "제가 개발했습니다."
 }
