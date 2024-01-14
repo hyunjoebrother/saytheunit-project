@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import './index.css';
 
 const SurveyCard = () => {
   const [count, setCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
+
+  const { t, i18n } = useTranslation();
+  const changeLanguage = lang => {
+    i18n.changeLanguage(lang);
+  };
 
   const end = 33; // 240110 데이터 업데이트
   const duration = 1700;
@@ -41,13 +47,20 @@ const SurveyCard = () => {
   return (
     <section className="w-full h-auto bg-[#4193c6] text-white 2xs:px-4 xs:px-2 2sm:px-4 px-10 2xs:py-4 xs:py-6 2sm:py-6 py-8 lg:py-12">
       <div className="flex flex-col 2xs:gap-2 gap-3 sm:gap-4 lg:gap-6 m-auto text-center items-center justify-center">
+        <button className="TransButton" onClick={() => changeLanguage('kr')}>
+          {t('translations:Korean')}
+        </button>
+        <button className="TransButton" onClick={() => changeLanguage('en')}>
+          {t('translations:English')}
+        </button>
         <p className="tip-text 2xs:text-[20px] text-[24px] lg:text-[28px] font-extrabold text-[#00dcb6]">
           <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-base text-base font-semibold text-white">
-            현재
+            <Trans i18nKey="translations:now">현재</Trans>
+            <Trans i18nKey="translations:welcome">Welcome to React'</Trans>
           </span>
           {count}
           <span className="mx-1 2xs:text-xs xs:text-xs 2sm:text-base text-base font-semibold text-white">
-            개의 유닛 이름이 있어요!
+            <Trans i18nKey="translations:count">개의 유닛 이름이 있어요!</Trans>
           </span>
         </p>
         <div className="2xs:text-[10px] xs:text-sm 2sm:text-sm">
