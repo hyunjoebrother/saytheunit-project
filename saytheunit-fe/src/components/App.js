@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './Translation/i18n';
 import Main from '../pages/Main/Main';
 import Error404 from '../pages/Error404/Error404';
 import preloadBg from '../assets/images/diamond-wallbg.png';
