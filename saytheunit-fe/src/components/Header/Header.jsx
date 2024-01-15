@@ -28,7 +28,10 @@ const Header = () => {
         </a>
       </div>
       <div className="scriptFont relative flex justify-end 2xs:text-[12px] xs:text-[14px] 2sm:text-[16px] sm:text-[18px] tb:text-[24px] lg:text-[28px]">
-        <button className="TransButton" onClick={handleToggleLanguage}>
+        <button
+          className="TransButton underline decoration-[0.6px] text-black"
+          onClick={handleToggleLanguage}
+        >
           <Trans
             i18nKey={`translations:${language === 'kr' ? 'English' : 'Korean'}`}
           >
