@@ -8,7 +8,7 @@ import axios from 'axios';
 import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
 import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
-import bongbong from '../../assets/images/bongbong.png';
+import bongbong from '../../assets/images/booboo.png';
 import CountingCard from '../../components/CountingCard/CountingCard';
 
 const Album = () => {
@@ -72,7 +72,7 @@ const Album = () => {
           index => areaNames[index].split(' ')[1],
         ),
       });
-      console.log(response.data); // 받은 데이터 출력
+      // console.log(response.data); // 받은 데이터 출력
       if (response.status === 404) {
         console.error('404 Error: Not Found');
         navigate('/error');
@@ -80,7 +80,7 @@ const Album = () => {
         // console.log('받은 데이터 없어용', response.data);
         setBackendData(response.data);
       } else {
-        console.log('받은 데이터 있어용', response.data);
+        // console.log('받은 데이터 있어용', response.data);
         setBackendData(response.data); // 여러 유닛 데이터 중 첫번째만
       }
     } catch (error) {
