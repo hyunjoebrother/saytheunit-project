@@ -27,7 +27,7 @@ const ResultCard = ({ result, text }) => {
               {result.unit_member.split(' ').map((name, index) => (
                 <div
                   key={index}
-                  className="2xs:px-2 xs:px-2 px-3 py-1 2xs:text-[8px] text-[12px] font-medium bg-[#ff862b] text-white 2xs:rounded-[4px] xs:rounded-[6px] 2sm:rounded-[6px] rounded-[8px]"
+                  className="2xs:px-2 xs:px-2 px-3 py-1 2xs:text-[8px] text-[12px] font-medium bg-[#f8cacc] text-white 2xs:rounded-[4px] xs:rounded-[6px] 2sm:rounded-[6px] rounded-[8px]"
                 >
                   {name}
                 </div>
