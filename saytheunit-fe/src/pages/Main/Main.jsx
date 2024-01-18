@@ -9,6 +9,7 @@ import HitCard from '../../components/HitCard/HitCard';
 import SnapshootCard from '../../components/SnapshootCard/SnapshootCard';
 import Footer from '../../components/Footer/Footer';
 import camera from '../../assets/images/camera-icon.png';
+import ShareCard from '../../components/ShareCard/ShareCard';
 
 const Main = () => {
   const { language } = useLanguage();
@@ -25,11 +26,11 @@ const Main = () => {
       <div className="mt-10 w-full flex">
         <SurveyCard />
       </div>
-      <div className="mt-14 flex">
-        <HitCard />
+      <div className="2xs:mt-10 xs:mt-14 mt-28 flex">
+        <ShareCard />
       </div>
       <div className="mt-0 mb-16 w-full flex flex-col m-auto items-center">
-        <div className="w-full py-6 flex flex-col m-auto items-center">
+        <div className="w-full 2xs:py-0 xs:py-0 py-6 flex flex-col m-auto items-center">
           <img
             onClick={toggleSnapshoot}
             src={camera}
@@ -45,6 +46,9 @@ const Main = () => {
           )}
         </div>
         {showSnapshoot && <SnapshootCard />}
+      </div>
+      <div className="2xs:py-0 my-16 flex">
+        <HitCard />
       </div>
       <Footer />
     </div>
