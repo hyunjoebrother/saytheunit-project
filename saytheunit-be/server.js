@@ -89,7 +89,7 @@ app.post("/api/getMembersData", async (req, res) => {
 
     const resultTotal = await executeQuery(totalquery);
     console.log("유닛 갯수", resultTotal);
-    // res.json(resultTotal); - 직접 수치 변경
+    // res.json(resultTotal); // 직접 수치 변경
 
     const commonUnitNames = findCommonUnitNames(
       results.map((result) => result.map((row) => row.unit_name))
