@@ -15,6 +15,7 @@ module.exports = {
       },
       backgroundImage: {
         diamondBg: "url('/src/assets/images/diamond-wallbg.png')",
+        dinoBg: "url('/src/assets/images/dino-wallbg.png')",
       },
     },
   },
