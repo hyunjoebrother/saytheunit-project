@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Trans } from 'react-i18next';
 import { useLanguage } from '../../components/Translation/languageContext';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 import Header from '../../components/Header/Header';
 import Album from '../Album/Album';
@@ -19,9 +21,34 @@ const Main = () => {
     setShowSnapshoot(!showSnapshoot);
   };
 
+  // 토스트는 처음 접속 시에만 띄우기
+  const hasToastBeenShown = localStorage.getItem('hasBeenShown');
+  if (!hasToastBeenShown) {
+    toast.success('오늘은 218즈 도겸버논 생일에디션 기간입니다!', {
+      position: 'top-center',
+      autoClose: 1700,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      style: {
+        color: 'black',
+        fontWeight: 500,
+        background: 'rgba(256, 256, 256, 1)',
+        borderRadius: '10px',
+      },
+    });
+
+    // 토스트가 이미 표시되었다는 플래그를 localStorage에 설정
+    localStorage.setItem('hasBeenShown', 'true');
+  }
+
   return (
     <div className="bg-vernonBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
       <Header />
+      <ToastContainer closeOnClick limit={1} />
+
       <Album />
       <div className="mt-10 w-full flex">
         <SurveyCard />
