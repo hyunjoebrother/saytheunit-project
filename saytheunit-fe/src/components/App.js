@@ -4,7 +4,7 @@ import './Translation/i18n';
 import Main from '../pages/Main/Main';
 import Error404 from '../pages/Error404/Error404';
 import preloadBg from '../assets/images/diamond-wallbg.png';
-import preloadAlbum from '../assets/images/svt-total-bg-frame.jpg';
+import preloadAlbum from '../assets/images/svt-total-bg-240213.jpeg';
 
 const App = () => {
   useEffect(() => {
