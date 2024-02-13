@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
-import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
+import albumBg from '../../assets/images/svt-total-bg-240213.jpeg';
 import bongbong from '../../assets/images/pizzaboy.png';
 import CountingCard from '../../components/CountingCard/CountingCard';
 
@@ -111,67 +111,67 @@ const Album = () => {
   ];
 
   const bongbongStyles2xs = [
-    { top: '26px', left: '74px', width: '10px', transform: 'rotate(8deg)' },
-    { top: '44px', left: '104px', width: '10px', transform: 'rotate(-20deg)' },
-    { top: '24px', left: '158px', width: '12px', transform: 'rotate(0deg)' },
-    { top: '36px', left: '194px', width: '12px', transform: 'rotate(-6deg)' },
-    { top: '40px', left: '144px', width: '10px', transform: 'rotate(0deg)' },
-    { top: '41px', left: '92px', width: '10px', transform: 'rotate(8deg)' },
-    { top: '43px', left: '32px', width: '10px', transform: 'rotate(14deg)' },
-    { top: '74px', left: '192px', width: '14px', transform: 'rotate(16deg)' },
-    { top: '68px', left: '98px', width: '16px', transform: 'rotate(-14deg)' },
-    { top: '52px', left: '44px', width: '12px', transform: 'rotate(-14deg)' },
-    { top: '66px', left: '152px', width: '10px', transform: 'rotate(4deg)' },
-    { top: '94px', left: '64px', width: '14px', transform: 'rotate(-16deg)' },
-    { top: '176px', left: '88px', width: '68px', transform: 'rotate(0deg)' },
+    { top: '40px', left: '206px', width: '14px', transform: 'rotate(4deg)' },
+    { top: '84px', left: '4px', width: '16px', transform: 'rotate(-28deg)' },
+    { top: '116px', left: '116px', width: '36px', transform: 'rotate(0deg)' },
+    { top: '70px', left: '220px', width: '12px', transform: 'rotate(6deg)' },
+    { top: '92px', left: '206px', width: '12px', transform: 'rotate(0deg)' },
+    { top: '38px', left: '108px', width: '12px', transform: 'rotate(12deg)' },
+    { top: '106px', left: '170px', width: '14px', transform: 'rotate(-36deg)' },
+    { top: '56px', left: '142px', width: '14px', transform: 'rotate(0deg)' },
+    { top: '104px', left: '48px', width: '28px', transform: 'rotate(-20deg)' },
+    { top: '50px', left: '168px', width: '18px', transform: 'rotate(40deg)' },
+    { top: '42px', left: '76px', width: '12px', transform: 'rotate(4deg)' },
+    { top: '62px', left: '190px', width: '14px', transform: 'rotate(-24deg)' },
+    { top: '69px', left: '104px', width: '12px', transform: 'rotate(0deg)' },
   ];
 
   const bongbongStylesxs = [
-    { top: '34px', left: '94px', width: '12px', transform: 'rotate(18deg)' },
-    { top: '56px', left: '132px', width: '12px', transform: 'rotate(-8deg)' },
-    { top: '30px', left: '198px', width: '14px', transform: 'rotate(0deg)' },
-    { top: '44px', left: '244px', width: '14px', transform: 'rotate(0deg)' },
-    { top: '50px', left: '184px', width: '12px', transform: 'rotate(16deg)' },
-    { top: '52px', left: '114px', width: '12px', transform: 'rotate(8deg)' },
-    { top: '52px', left: '38px', width: '14px', transform: 'rotate(6deg)' },
-    { top: '94px', left: '240px', width: '18px', transform: 'rotate(16deg)' },
-    { top: '86px', left: '122px', width: '20px', transform: 'rotate(-14deg)' },
-    { top: '66px', left: '56px', width: '14px', transform: 'rotate(-14deg)' },
-    { top: '82px', left: '188px', width: '14px', transform: 'rotate(4deg)' },
-    { top: '118px', left: '82px', width: '16px', transform: 'rotate(-16deg)' },
-    { top: '220px', left: '116px', width: '80px', transform: 'rotate(0deg)' },
+    { top: '52px', left: '268px', width: '18px', transform: 'rotate(4deg)' },
+    { top: '110px', left: '4px', width: '20px', transform: 'rotate(-28deg)' },
+    { top: '154px', left: '154px', width: '44px', transform: 'rotate(0deg)' },
+    { top: '92px', left: '286px', width: '14px', transform: 'rotate(6deg)' },
+    { top: '120px', left: '268px', width: '16px', transform: 'rotate(0deg)' },
+    { top: '52px', left: '140px', width: '14px', transform: 'rotate(12deg)' },
+    { top: '138px', left: '222px', width: '16px', transform: 'rotate(-36deg)' },
+    { top: '74px', left: '186px', width: '16px', transform: 'rotate(0deg)' },
+    { top: '140px', left: '62px', width: '32px', transform: 'rotate(-20deg)' },
+    { top: '66px', left: '217px', width: '22px', transform: 'rotate(40deg)' },
+    { top: '52px', left: '96px', width: '16px', transform: 'rotate(4deg)' },
+    { top: '82px', left: '250px', width: '16px', transform: 'rotate(-24deg)' },
+    { top: '90px', left: '132px', width: '14px', transform: 'rotate(0deg)' },
   ];
 
   const bongbongStyles2sm = [
-    { top: '37px', left: '104px', width: '16px', transform: 'rotate(10deg)' },
-    { top: '62px', left: '146px', width: '16px', transform: 'rotate(-12deg)' },
-    { top: '36px', left: '222px', width: '18px', transform: 'rotate(0deg)' },
-    { top: '50px', left: '274px', width: '18px', transform: 'rotate(-6deg)' },
-    { top: '58px', left: '208px', width: '14px', transform: 'rotate(12deg)' },
-    { top: '59px', left: '128px', width: '14px', transform: 'rotate(8deg)' },
-    { top: '60px', left: '42px', width: '14px', transform: 'rotate(4deg)' },
-    { top: '106px', left: '274px', width: '18px', transform: 'rotate(16deg)' },
-    { top: '100px', left: '140px', width: '20px', transform: 'rotate(-14deg)' },
-    { top: '76px', left: '62px', width: '16px', transform: 'rotate(-14deg)' },
-    { top: '94px', left: '212px', width: '16px', transform: 'rotate(4deg)' },
-    { top: '134px', left: '92px', width: '18px', transform: 'rotate(-16deg)' },
-    { top: '244px', left: '130px', width: '96px', transform: 'rotate(0deg)' },
+    { top: '56px', left: '290px', width: '20px', transform: 'rotate(4deg)' },
+    { top: '120px', left: '4px', width: '22px', transform: 'rotate(-28deg)' },
+    { top: '166px', left: '164px', width: '48px', transform: 'rotate(0deg)' },
+    { top: '100px', left: '308px', width: '16px', transform: 'rotate(6deg)' },
+    { top: '132px', left: '292px', width: '18px', transform: 'rotate(0deg)' },
+    { top: '57px', left: '152px', width: '14px', transform: 'rotate(12deg)' },
+    { top: '152px', left: '242px', width: '16px', transform: 'rotate(-36deg)' },
+    { top: '78px', left: '200px', width: '20px', transform: 'rotate(0deg)' },
+    { top: '152px', left: '70px', width: '34px', transform: 'rotate(-20deg)' },
+    { top: '70px', left: '236px', width: '26px', transform: 'rotate(40deg)' },
+    { top: '60px', left: '102px', width: '16px', transform: 'rotate(4deg)' },
+    { top: '90px', left: '272px', width: '18px', transform: 'rotate(-24deg)' },
+    { top: '100px', left: '142px', width: '16px', transform: 'rotate(0deg)' },
   ];
 
   const bongbongStylesLarge = [
-    { top: '56px', left: '154px', width: '20px', transform: 'rotate(8deg)' },
-    { top: '90px', left: '216px', width: '24px', transform: 'rotate(-8deg)' },
-    { top: '50px', left: '326px', width: '28px', transform: 'rotate(0deg)' },
-    { top: '74px', left: '404px', width: '24px', transform: 'rotate(-6deg)' },
-    { top: '86px', left: '306px', width: '18px', transform: 'rotate(8deg)' },
-    { top: '86px', left: '192px', width: '18px', transform: 'rotate(8deg)' },
-    { top: '86px', left: '62px', width: '22px', transform: 'rotate(6deg)' },
-    { top: '156px', left: '400px', width: '28px', transform: 'rotate(16deg)' },
-    { top: '146px', left: '204px', width: '30px', transform: 'rotate(-14deg)' },
-    { top: '112px', left: '92px', width: '22px', transform: 'rotate(-14deg)' },
-    { top: '138px', left: '314px', width: '20px', transform: 'rotate(4deg)' },
-    { top: '200px', left: '138px', width: '24px', transform: 'rotate(-16deg)' },
-    { top: '370px', left: '200px', width: '120px', transform: 'rotate(0deg)' },
+    { top: '102px', left: '498px', width: '28px', transform: 'rotate(4deg)' },
+    { top: '218px', left: '14px', width: '32px', transform: 'rotate(-28deg)' },
+    { top: '296px', left: '284px', width: '68px', transform: 'rotate(0deg)' },
+    { top: '174px', left: '528px', width: '24px', transform: 'rotate(6deg)' },
+    { top: '228px', left: '498px', width: '28px', transform: 'rotate(0deg)' },
+    { top: '100px', left: '262px', width: '20px', transform: 'rotate(12deg)' },
+    { top: '260px', left: '418px', width: '22px', transform: 'rotate(-36deg)' },
+    { top: '144px', left: '348px', width: '28px', transform: 'rotate(0deg)' },
+    { top: '272px', left: '122px', width: '48px', transform: 'rotate(-20deg)' },
+    { top: '116px', left: '404px', width: '48px', transform: 'rotate(40deg)' },
+    { top: '106px', left: '172px', width: '24px', transform: 'rotate(4deg)' },
+    { top: '160px', left: '470px', width: '24px', transform: 'rotate(-24deg)' },
+    { top: '176px', left: '244px', width: '22px', transform: 'rotate(0deg)' },
   ];
 
   return (
@@ -182,13 +182,13 @@ const Album = () => {
             src={albumBg}
             alt="Album Background"
             useMap="#albumMap2xs"
-            className="2xs:w-[240px] 2xs:h-[240px] xs:hidden 2sm:hidden sm:hidden tb:hidden lg:hidden"
+            className="2xs:w-[268px] 2xs:h-[206px] xs:hidden 2sm:hidden sm:hidden tb:hidden lg:hidden"
           />
           <map name="albumMap2xs">
             <area
               alt=""
               shape="rect"
-              coords="62,36,88,68"
+              coords="202,52,242,82"
               onClick={() => handleAreaClick(0)} // 에스쿱스
               onMouseEnter={() => handleAreaHover(0)}
               onMouseLeave={handleAreaHoverExit}
@@ -196,7 +196,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="110,36,132,56"
+              coords="8,84,44,200"
               onClick={() => handleAreaClick(1)} // 정한
               onMouseEnter={() => handleAreaHover(1)}
               onMouseLeave={handleAreaHoverExit}
@@ -204,7 +204,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="156,36,172,54"
+              coords="120,80,136,100"
               onClick={() => handleAreaClick(2)} // 조슈아
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -212,7 +212,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="156,54,174,74"
+              coords="112,100,146,200"
               onClick={() => handleAreaClick(2)}
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -220,7 +220,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="194,48,220,80"
+              coords="218,84,260,106"
               onClick={() => handleAreaClick(3)} // 준
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -228,7 +228,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="206,94,228,162"
+              coords="222,108,260,200"
               onClick={() => handleAreaClick(3)}
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -236,7 +236,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="132,52,156,74"
+              coords="192,86,216,112"
               onClick={() => handleAreaClick(4)} // 호시
               onMouseEnter={() => handleAreaHover(4)}
               onMouseLeave={handleAreaHoverExit}
@@ -244,7 +244,15 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="86,52,110,74"
+              coords="190,116,232,200"
+              onClick={() => handleAreaClick(4)}
+              onMouseEnter={() => handleAreaHover(4)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="84,50,120,82"
               onClick={() => handleAreaClick(5)} // 원우
               onMouseEnter={() => handleAreaHover(5)}
               onMouseLeave={handleAreaHoverExit}
@@ -252,7 +260,23 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="24,54,48,84"
+              coords="82,82,94,116"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="108,78,122,102"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="162,92,178,104"
               onClick={() => handleAreaClick(6)} // 우지
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -260,7 +284,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="18,88,48,128"
+              coords="154,104,192,200"
               onClick={() => handleAreaClick(6)}
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -268,7 +292,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="176,60,196,86"
+              coords="120,50,154,80"
               onClick={() => handleAreaClick(7)} // 디에잇
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -276,7 +300,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="172,84,206,184"
+              coords="140,80,156,102"
               onClick={() => handleAreaClick(7)}
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -284,7 +308,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="114,56,132,82"
+              coords="58,84,74,104"
               onClick={() => handleAreaClick(8)} // 민규
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -292,7 +316,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="104,82,142,104"
+              coords="44,102,82,200"
               onClick={() => handleAreaClick(8)}
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -300,7 +324,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="48,64,68,88"
+              coords="156,64,180,90"
               onClick={() => handleAreaClick(9)} // 도겸
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -308,7 +332,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="44,86,66,160"
+              coords="180,86,188,104"
               onClick={() => handleAreaClick(9)}
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -316,7 +340,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="146,78,166,106"
+              coords="36,52,80,80"
               onClick={() => handleAreaClick(10)} // 승관
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -324,7 +348,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="136,104,176,146"
+              coords="48,82,58,100"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -332,7 +356,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="156,152,180,204"
+              coords="74,84,80,104"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -340,7 +364,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="80,78,100,106"
+              coords="176,60,204,84"
               onClick={() => handleAreaClick(11)} // 버논
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -348,7 +372,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="70,104,108,142"
+              coords="186,86,196,102"
               onClick={() => handleAreaClick(11)}
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -356,15 +380,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="70,150,90,218"
-              onClick={() => handleAreaClick(11)}
-              onMouseEnter={() => handleAreaHover(11)}
-              onMouseLeave={handleAreaHoverExit}
-            />
-            <area
-              alt=""
-              shape="rect"
-              coords="112,108,138,144"
+              coords="90,80,110,104"
               onClick={() => handleAreaClick(12)} // 디노
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -372,7 +388,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="94,146,158,240"
+              coords="78,102,116,190"
               onClick={() => handleAreaClick(12)}
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -382,13 +398,13 @@ const Album = () => {
             src={albumBg}
             alt="Album Background"
             useMap="#albumMapxs"
-            className="2xs:hidden xs:w-[300px] xs:h-[300px] 2sm:hidden sm:hidden tb:hidden lg:hidden"
+            className="2xs:hidden xs:w-[348px] xs:h-[267px] 2sm:hidden sm:hidden tb:hidden lg:hidden"
           />
           <map name="albumMapxs">
             <area
               alt=""
               shape="rect"
-              coords="78,46,108,90"
+              coords="264,68,316,104"
               onClick={() => handleAreaClick(0)} // 에스쿱스
               onMouseEnter={() => handleAreaHover(0)}
               onMouseLeave={handleAreaHoverExit}
@@ -396,7 +412,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="136,46,166,70"
+              coords="10,108,58,258"
               onClick={() => handleAreaClick(1)} // 정한
               onMouseEnter={() => handleAreaHover(1)}
               onMouseLeave={handleAreaHoverExit}
@@ -404,7 +420,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="196,44,216,64"
+              coords="156,102,174,132"
               onClick={() => handleAreaClick(2)} // 조슈아
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -412,7 +428,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="196,70,222,94"
+              coords="150,132,192,260"
               onClick={() => handleAreaClick(2)}
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -420,7 +436,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="244,58,270,110"
+              coords="282,110,340,152"
               onClick={() => handleAreaClick(3)} // 준
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -428,7 +444,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="256,116,284,202"
+              coords="294,160,340,258"
               onClick={() => handleAreaClick(3)}
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -436,7 +452,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="172,66,194,94"
+              coords="252,110,270,134"
               onClick={() => handleAreaClick(4)} // 호시
               onMouseEnter={() => handleAreaHover(4)}
               onMouseLeave={handleAreaHoverExit}
@@ -444,7 +460,15 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="110,66,134,94"
+              coords="248,138,300,256"
+              onClick={() => handleAreaClick(4)}
+              onMouseEnter={() => handleAreaHover(4)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="110,64,156,108"
               onClick={() => handleAreaClick(5)} // 원우
               onMouseEnter={() => handleAreaHover(5)}
               onMouseLeave={handleAreaHoverExit}
@@ -452,7 +476,23 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="30,66,60,106"
+              coords="106,102,122,146"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="144,102,154,132"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="212,120,230,132"
               onClick={() => handleAreaClick(6)} // 우지
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -460,7 +500,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="24,116,48,162"
+              coords="196,136,250,260"
               onClick={() => handleAreaClick(6)}
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -468,7 +508,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="222,74,246,104"
+              coords="156,60,200,104"
               onClick={() => handleAreaClick(7)} // 디에잇
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -476,7 +516,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="216,108,248,232"
+              coords="178,100,202,132"
               onClick={() => handleAreaClick(7)}
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -484,7 +524,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="142,72,162,100"
+              coords="74,108,94,128"
               onClick={() => handleAreaClick(8)} // 민규
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -492,7 +532,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="132,102,178,130"
+              coords="58,130,106,260"
               onClick={() => handleAreaClick(8)}
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -500,7 +540,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="60,80,82,108"
+              coords="204,80,234,116"
               onClick={() => handleAreaClick(9)} // 도겸
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -508,7 +548,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="56,104,80,200"
+              coords="230,112,242,128"
               onClick={() => handleAreaClick(9)}
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -516,7 +556,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="184,98,208,132"
+              coords="46,68,106,106"
               onClick={() => handleAreaClick(10)} // 승관
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -524,7 +564,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="172,132,216,190"
+              coords="62,110,74,128"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -532,7 +572,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="194,186,226,256"
+              coords="96,106,104,134"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -540,7 +580,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="100,96,120,126"
+              coords="230,79,264,108"
               onClick={() => handleAreaClick(11)} // 버논
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -548,7 +588,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="86,128,138,172"
+              coords="240,114,254,136"
               onClick={() => handleAreaClick(11)}
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -556,15 +596,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="84,188,118,272"
-              onClick={() => handleAreaClick(11)}
-              onMouseEnter={() => handleAreaHover(11)}
-              onMouseLeave={handleAreaHoverExit}
-            />
-            <area
-              alt=""
-              shape="rect"
-              coords="140,136,172,180"
+              coords="122,106,142,132"
               onClick={() => handleAreaClick(12)} // 디노
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -572,7 +604,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="116,176,196,300"
+              coords="100,130,154,254"
               onClick={() => handleAreaClick(12)}
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -582,13 +614,13 @@ const Album = () => {
             src={albumBg}
             alt="Album Background"
             useMap="#albumMap2sm"
-            className="2xs:hidden xs:hidden 2sm:w-[340px] 2sm:h-[340px] sm:hidden tb:hidden lg:hidden"
+            className="2xs:hidden xs:hidden 2sm:w-[380px] 2sm:h-[292px] sm:hidden tb:hidden lg:hidden"
           />
           <map name="albumMap2sm">
             <area
               alt=""
               shape="rect"
-              coords="86,50,125,100"
+              coords="290,76,346,116"
               onClick={() => handleAreaClick(0)} // 에스쿱스
               onMouseEnter={() => handleAreaHover(0)}
               onMouseLeave={handleAreaHoverExit}
@@ -596,7 +628,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="156,50,188,78"
+              coords="12,120,58,284"
               onClick={() => handleAreaClick(1)} // 정한
               onMouseEnter={() => handleAreaHover(1)}
               onMouseLeave={handleAreaHoverExit}
@@ -604,7 +636,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="222,48,244,76"
+              coords="172,116,194,140"
               onClick={() => handleAreaClick(2)} // 조슈아
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -612,7 +644,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="224,74,250,108"
+              coords="164,144,208,286"
               onClick={() => handleAreaClick(2)}
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -620,7 +652,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="276,66,308,122"
+              coords="310,118,370,146"
               onClick={() => handleAreaClick(3)} // 준
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -628,7 +660,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="292,128,322,228"
+              coords="318,146,372,282"
               onClick={() => handleAreaClick(3)}
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -636,7 +668,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="194,74,222,106"
+              coords="276,122,296,150"
               onClick={() => handleAreaClick(4)} // 호시
               onMouseEnter={() => handleAreaHover(4)}
               onMouseLeave={handleAreaHoverExit}
@@ -644,7 +676,15 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="123,74,156,106"
+              coords="272,150,326,280"
+              onClick={() => handleAreaClick(4)}
+              onMouseEnter={() => handleAreaHover(4)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="120,70,170,114"
               onClick={() => handleAreaClick(5)} // 원우
               onMouseEnter={() => handleAreaHover(5)}
               onMouseLeave={handleAreaHoverExit}
@@ -652,7 +692,23 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="40,74,64,124"
+              coords="118,114,130,140"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="158,116,174,144"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="226,130,254,152"
               onClick={() => handleAreaClick(6)} // 우지
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -660,7 +716,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="34,104,54,188"
+              coords="224,152,272,196"
               onClick={() => handleAreaClick(6)}
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -668,7 +724,15 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="250,84,274,118"
+              coords="212,194,274,284"
+              onClick={() => handleAreaClick(6)}
+              onMouseEnter={() => handleAreaHover(6)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="172,64,216,110"
               onClick={() => handleAreaClick(7)} // 디에잇
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -676,7 +740,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="236,120,280,256"
+              coords="196,112,220,144"
               onClick={() => handleAreaClick(7)}
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -684,7 +748,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="160,80,188,116"
+              coords="80,116,104,144"
               onClick={() => handleAreaClick(8)} // 민규
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -692,7 +756,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="148,118,202,146"
+              coords="64,144,116,282"
               onClick={() => handleAreaClick(8)}
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -700,7 +764,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="68,90,96,120"
+              coords="222,88,256,126"
               onClick={() => handleAreaClick(9)} // 도겸
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -708,7 +772,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="62,120,100,216"
+              coords="252,118,266,144"
               onClick={() => handleAreaClick(9)}
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -716,7 +780,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="206,110,232,148"
+              coords="52,72,116,116"
               onClick={() => handleAreaClick(10)} // 승관
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -724,7 +788,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="196,150,242,222"
+              coords="68,116,80,144"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -732,7 +796,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="222,218,256,290"
+              coords="104,116,116,148"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -740,7 +804,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="108,108,140,148"
+              coords="250,84,288,118"
               onClick={() => handleAreaClick(11)} // 버논
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -748,7 +812,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="100,150,156,196"
+              coords="264,128,274,148"
               onClick={() => handleAreaClick(11)}
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -756,15 +820,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="90,212,130,306"
-              onClick={() => handleAreaClick(11)}
-              onMouseEnter={() => handleAreaHover(11)}
-              onMouseLeave={handleAreaHoverExit}
-            />
-            <area
-              alt=""
-              shape="rect"
-              coords="156,152,196,202"
+              coords="130,116,154,144"
               onClick={() => handleAreaClick(12)} // 디노
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -772,7 +828,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="134,200,220,340"
+              coords="112,144,166,276"
               onClick={() => handleAreaClick(12)}
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -782,13 +838,13 @@ const Album = () => {
             src={albumBg}
             alt="Album Background"
             useMap="#albumMapLarge"
-            className="2xs:hidden xs:hidden 2sm:hidden w-[500px] h-[500px]"
+            className="2xs:hidden xs:hidden 2sm:hidden w-[650px] h-[500px]"
           />
           <map name="albumMapLarge">
             <area
               alt=""
               shape="rect"
-              coords="128,72,184,150"
+              coords="488,126,585,194"
               onClick={() => handleAreaClick(0)} // 에스쿱스
               onMouseEnter={() => handleAreaHover(0)}
               onMouseLeave={handleAreaHoverExit}
@@ -796,7 +852,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="230,76,272,112"
+              coords="24,204,100,482"
               onClick={() => handleAreaClick(1)} // 정한
               onMouseEnter={() => handleAreaHover(1)}
               onMouseLeave={handleAreaHoverExit}
@@ -804,7 +860,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="322,74,368,116"
+              coords="294,196,330,240"
               onClick={() => handleAreaClick(2)} // 조슈아
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -812,7 +868,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="328,128,362,166"
+              coords="280,250,352,482"
               onClick={() => handleAreaClick(2)}
               onMouseEnter={() => handleAreaHover(2)}
               onMouseLeave={handleAreaHoverExit}
@@ -820,7 +876,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="404,100,450,192"
+              coords="528,200,590,254"
               onClick={() => handleAreaClick(3)} // 준
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -828,7 +884,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="430,188,474,338"
+              coords="534,246,638,486"
               onClick={() => handleAreaClick(3)}
               onMouseEnter={() => handleAreaHover(3)}
               onMouseLeave={handleAreaHoverExit}
@@ -836,7 +892,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="286,111,330,155"
+              coords="472,212,504,254"
               onClick={() => handleAreaClick(4)} // 호시
               onMouseEnter={() => handleAreaHover(4)}
               onMouseLeave={handleAreaHoverExit}
@@ -844,7 +900,15 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="182,106,228,158"
+              coords="464,258,554,479"
+              onClick={() => handleAreaClick(4)}
+              onMouseEnter={() => handleAreaHover(4)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="214,122,290,198"
               onClick={() => handleAreaClick(5)} // 원우
               onMouseEnter={() => handleAreaHover(5)}
               onMouseLeave={handleAreaHoverExit}
@@ -852,7 +916,23 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="48,114,96,174"
+              coords="206,170,222,238"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="266,184,292,242"
+              onClick={() => handleAreaClick(5)}
+              onMouseEnter={() => handleAreaHover(5)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="390,220,432,256"
               onClick={() => handleAreaClick(6)} // 우지
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -860,7 +940,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="44,188,82,262"
+              coords="386,252,464,348"
               onClick={() => handleAreaClick(6)}
               onMouseEnter={() => handleAreaHover(6)}
               onMouseLeave={handleAreaHoverExit}
@@ -868,7 +948,15 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="369,136,400,178"
+              coords="364,354,464,484"
+              onClick={() => handleAreaClick(6)}
+              onMouseEnter={() => handleAreaHover(6)}
+              onMouseLeave={handleAreaHoverExit}
+            />
+            <area
+              alt=""
+              shape="rect"
+              coords="300,120,368,184"
               onClick={() => handleAreaClick(7)} // 디에잇
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -876,7 +964,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="348,182,408,356"
+              coords="336,192,374,240"
               onClick={() => handleAreaClick(7)}
               onMouseEnter={() => handleAreaHover(7)}
               onMouseLeave={handleAreaHoverExit}
@@ -884,7 +972,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="236,128,282,172"
+              coords="142,200,172,250"
               onClick={() => handleAreaClick(8)} // 민규
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -892,7 +980,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="216,172,294,220"
+              coords="108,244,196,484"
               onClick={() => handleAreaClick(8)}
               onMouseEnter={() => handleAreaHover(8)}
               onMouseLeave={handleAreaHoverExit}
@@ -900,7 +988,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="98,136,144,178"
+              coords="382,154,432,212"
               onClick={() => handleAreaClick(9)} // 도겸
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -908,7 +996,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="98,184,142,328"
+              coords="432,206,454,244"
               onClick={() => handleAreaClick(9)}
               onMouseEnter={() => handleAreaHover(9)}
               onMouseLeave={handleAreaHoverExit}
@@ -916,7 +1004,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="306,166,340,216"
+              coords="90,132,200,202"
               onClick={() => handleAreaClick(10)} // 승관
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -924,7 +1012,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="290,222,360,300"
+              coords="116,202,140,236"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -932,7 +1020,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="328,322,356,426"
+              coords="180,200,196,250"
               onClick={() => handleAreaClick(10)}
               onMouseEnter={() => handleAreaHover(10)}
               onMouseLeave={handleAreaHoverExit}
@@ -940,7 +1028,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="168,168,206,212"
+              coords="428,146,494,204"
               onClick={() => handleAreaClick(11)} // 버논
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -948,7 +1036,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="144,226,226,290"
+              coords="456,220,474,250"
               onClick={() => handleAreaClick(11)}
               onMouseEnter={() => handleAreaHover(11)}
               onMouseLeave={handleAreaHoverExit}
@@ -956,15 +1044,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="138,314,184,450"
-              onClick={() => handleAreaClick(11)}
-              onMouseEnter={() => handleAreaHover(11)}
-              onMouseLeave={handleAreaHoverExit}
-            />
-            <area
-              alt=""
-              shape="rect"
-              coords="226,226,284,314"
+              coords="226,200,264,244"
               onClick={() => handleAreaClick(12)} // 디노
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
@@ -972,7 +1052,7 @@ const Album = () => {
             <area
               alt=""
               shape="rect"
-              coords="200,314,322,500"
+              coords="194,252,282,472"
               onClick={() => handleAreaClick(12)}
               onMouseEnter={() => handleAreaHover(12)}
               onMouseLeave={handleAreaHoverExit}
