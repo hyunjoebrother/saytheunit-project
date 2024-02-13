@@ -8,7 +8,7 @@ import axios from 'axios';
 import './index.css';
 import ResultCard from '../../components/ResultCard/ResultCard';
 import albumBg from '../../assets/images/svt-total-bg-frame.jpg';
-import bongbong from '../../assets/images/bongbong.png';
+import bongbong from '../../assets/images/pizzaboy.png';
 import CountingCard from '../../components/CountingCard/CountingCard';
 
 const Album = () => {

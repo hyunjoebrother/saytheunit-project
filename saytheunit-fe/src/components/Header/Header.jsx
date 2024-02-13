@@ -17,7 +17,7 @@ const Header = () => {
   // console.log('Header: ', language);
 
   return (
-    <header className="w-full h-auto px-4 tb:px-8 lg:px-16 pt-2 bg-[#b3d8ef] text-2xl text-white flex flex-col ">
+    <header className="w-full h-auto px-4 tb:px-8 lg:px-16 pt-2 bg-[#ffe4e1] text-2xl text-white flex flex-col ">
       <div className="flex items-center justify-center">
         <a href="/">
           <img
