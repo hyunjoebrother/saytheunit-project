@@ -20,7 +20,7 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-dinoBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
+    <div className="bg-vernonBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
       <Header />
       <Album />
       <div className="mt-10 w-full flex">
