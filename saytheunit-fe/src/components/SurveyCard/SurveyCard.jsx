@@ -8,7 +8,7 @@ const SurveyCard = () => {
   const [count, setCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
-  const end = 103; // 240213 데이터 업데이트 - 칼럼수 기준 103, 전체 105
+  const end = 105; // 240220 데이터 업데이트 - 칼럼수 기준 105, 전체 107
   const duration = 1700;
 
   const frameRate = 1000 / 60;
