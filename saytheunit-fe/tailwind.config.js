@@ -15,7 +15,6 @@ module.exports = {
       },
       backgroundImage: {
         diamondBg: "url('/src/assets/images/diamond-wallbg.png')",
-        vernonBg: "url('/src/assets/images/218-bg-sized.jpg')",
       },
     },
   },

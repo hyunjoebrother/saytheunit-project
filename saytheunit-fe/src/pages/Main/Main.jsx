@@ -45,7 +45,7 @@ const Main = () => {
   }
 
   return (
-    <div className="bg-vernonBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
+    <div className="bg-diamondBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
       <Header />
       <ToastContainer closeOnClick limit={1} />
 
