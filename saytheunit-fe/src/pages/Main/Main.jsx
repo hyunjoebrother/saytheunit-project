@@ -22,9 +22,9 @@ const Main = () => {
   };
 
   // 토스트는 처음 접속 시에만 띄우기
-  const hasToastBeenShown = localStorage.getItem('hasBeenShown');
+  const hasToastBeenShown = localStorage.getItem('hasBeenShown240406');
   if (!hasToastBeenShown) {
-    toast.success('오늘은 218즈 도겸버논 생일에디션 기간입니다!', {
+    toast.success('오늘은 민규 생일에디션 기간입니다!', {
       position: 'top-center',
       autoClose: 1700,
       hideProgressBar: false,
@@ -41,11 +41,11 @@ const Main = () => {
     });
 
     // 토스트가 이미 표시되었다는 플래그를 localStorage에 설정
-    localStorage.setItem('hasBeenShown', 'true');
+    localStorage.setItem('hasBeenShown240406', 'true');
   }
 
   return (
-    <div className="bg-diamondBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
+    <div className="bg-puppyBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
       <Header />
       <ToastContainer closeOnClick limit={1} />
 
