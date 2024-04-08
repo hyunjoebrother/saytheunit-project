@@ -45,9 +45,9 @@ const Main = () => {
   }
 
   return (
-    <div className="bg-puppyBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
+    <div className="bg-diamondBg bg-repeat bg-contain w-full h-full flex flex-col m-auto items-center">
       <Header />
-      <ToastContainer closeOnClick limit={1} />
+      {/* <ToastContainer closeOnClick limit={1} /> */}
 
       <Album />
       <div className="mt-10 w-full flex">
