@@ -22,9 +22,9 @@ const Main = () => {
   };
 
   // 토스트는 처음 접속 시에만 띄우기
-  const hasToastBeenShown = localStorage.getItem('hasBeenShown240406');
+  const hasToastBeenShown = localStorage.getItem('hasBeenShown240520');
   if (!hasToastBeenShown) {
-    toast.success('오늘은 민규 생일에디션 기간입니다!', {
+    toast.success('멤버 최대 4명까지 선택 가능!', {
       position: 'top-center',
       autoClose: 1700,
       hideProgressBar: false,
